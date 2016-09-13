@@ -17,12 +17,12 @@ public partial class Tehtava_1_IkkunaLaskuri : System.Web.UI.Page
         
     }
 
-    double getValue(string stringValue)
+    double getValue(string strValue)
     {
         double valuena;
         try
         {
-            valuena = Convert.ToDouble(stringValue);
+            valuena = Convert.ToDouble(strValue);
             return valuena;
         }
         catch
