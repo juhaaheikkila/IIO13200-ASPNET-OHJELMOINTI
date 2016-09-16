@@ -90,6 +90,19 @@ public partial class Tehtava_1_IkkunaLaskuri : System.Web.UI.Page
     protected void txtLength_TextChanged(object sender, EventArgs e)
     {
         double valuena = getValue(txtLength.Text);
-       
+        txtLength.Text = valuena.ToString();
+
+    }
+
+    protected void txtHeight_TextChanged(object sender, EventArgs e)
+    {
+        double valuena = getValue(txtHeight.Text);
+        txtHeight.Text = valuena.ToString();
+        
+    }
+
+    protected void txtWidth_TextChanged(object sender, EventArgs e)
+    {
+
     }
 }

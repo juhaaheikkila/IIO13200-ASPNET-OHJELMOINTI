@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="IkkunaLaskuri.aspx.cs" Inherits="Tehtava_1_IkkunaLaskuri" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Tehtava_1_IkkunaLaskuri.aspx.cs" Inherits="Tehtava_1_IkkunaLaskuri" %>
 
 <!DOCTYPE html>
 
@@ -27,12 +27,12 @@
                             </tr>
                             <tr>
                                 <td>Ikkunan Korkeus (H):</td>
-                                <td><asp:TextBox ID="txtHeight" runat="server" class="w3-input" style="text-align:right; font-weight: 700;"></asp:TextBox></td>
+                                <td><asp:TextBox ID="txtHeight" runat="server" class="w3-input" style="text-align:right; font-weight: 700;" OnTextChanged="txtHeight_TextChanged"></asp:TextBox></td>
                                 <td>[MM]</td>
                             </tr>
                             <tr>
                                 <td>Karmipuun leveys (W):</td>
-                                <td><asp:TextBox ID="txtWidth" runat="server" class="w3-input" style="text-align:right; font-weight: 700;">45</asp:TextBox></td>
+                                <td><asp:TextBox ID="txtWidth" runat="server" class="w3-input" style="text-align:right; font-weight: 700;" OnTextChanged="txtWidth_TextChanged">45</asp:TextBox></td>
                                 <td>[MM]</td>
                             </tr>
                             <tr>
@@ -59,8 +59,11 @@
                     </td>
                 </tr>
                 <tr>
-                    <td colspan ="2">
-                        <asp:Label ID="lblMessage" runat="server" Text="..."></asp:Label></td>
+                    <td colspan ="2">    
+                        <asp:Label ID="lblMessage" runat="server" Text="..."></asp:Label>
+                    </td>
+                        
+                       
                 </tr>
             </table>
         </div>
