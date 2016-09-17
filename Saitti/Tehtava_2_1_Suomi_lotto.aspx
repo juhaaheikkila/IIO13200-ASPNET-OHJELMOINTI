@@ -20,9 +20,13 @@
             </p>
             <asp:Label id="lblResults" Text="..." runat ="server" />
         </div>
-        <div id="footer">
+        <div id="data">
             <p>Tulokset:</p>
-            <asp:Label id="lblFooter" runat="server" Text="..." />
+            <asp:GridView ID="gvArvotutnumerot" runat="server" />
+        </div>
+
+        <div id="footer">
+            <asp:Label ID ="lblMessages" runat ="server" />
         </div>
     </div>
     </form>

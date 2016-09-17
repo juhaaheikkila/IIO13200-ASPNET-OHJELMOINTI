@@ -59,7 +59,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td colspan ="2">    
+                    <td colspan ="2">
                         <asp:Label ID="lblMessage" runat="server" Text="..."></asp:Label>
                     </td>
                         

@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
-
 
 
 /// <summary>
@@ -10,45 +10,93 @@ using System.Web;
 /// </summary>
 namespace JAMK.ICT.BL
 {
-    public class LottoKone
-    
+    public static class Lottoaja
     {
-        private int NumeroidenLukumaara;
-        private int MaxNumero;
-        private List<LottoRivi> lottorivit;
 
-        public LottoKone(int lukumaara, int maksimi)
+        public static DataTable ArvoLottoNumerot(string strKoneenNimi, int intLukumaaraArvottavia, int intRuudukonMaksimi, int intRivienLukumaara)
         {
-            this.NumeroidenLukumaara = lukumaara;
-            this.MaxNumero = maksimi;
+            DataTable dt = new DataTable();
+            LottoKone lottoa = new LottoKone(strKoneenNimi, intLukumaaraArvottavia, intRuudukonMaksimi, intRivienLukumaara);
+            List<LottoRivi> lottorivit = lottoa.getRivit();
+            LottoRivi lottorivi = null;
+
+            dt.Columns.Add("#");
+            dt.Columns.Add(strKoneenNimi);
+
+            for (int f = 0; f < lottorivit.Count; f++)
+            {
+                lottorivi = lottorivit[f];
+                dt.Rows.Add(f, lottorivi.ToString());
+            }
+            return dt;
         }
-        public List<LottoRivi>SuoritaArvonta(int ArvoRiveja)
+
+        public class LottoKone
         {
-            for 
+            //Random numeroidenArpoja = new Random();
+            Random rnd = new Random((int)DateTime.Now.Ticks);
+            string strKoneenNimi;
+            int intLukumaaraArvottavia;
+            int intRuudukonMaksimi;
+            int intRivienLukumaara;
+            
+
+            //private LottoRivit lottorivit = null;
+            private List<LottoRivi> lottorivit = new List<LottoRivi>();
+
+            public LottoKone(string strKoneenNimi, int intLukumaaraArvottavia, int intRuudukonMaksimi, int intRivienLukumaara)
+            {
+                this.strKoneenNimi = strKoneenNimi;
+                this.intLukumaaraArvottavia = intLukumaaraArvottavia;
+                this.intRuudukonMaksimi = intRuudukonMaksimi;
+                this.intRivienLukumaara = intRivienLukumaara;
+                arvoRivit(intRivienLukumaara);
+            }
+
+            public void arvoRivit(int intRivienLukumaara)
+            {
+                LottoRivi arvottuRivi = null;
+                for (int i = 1; i <= intRivienLukumaara; i++)
+                {
+                    arvottuRivi = new LottoRivi(rnd, this.intLukumaaraArvottavia , this.intRuudukonMaksimi);
+                    lottorivit.Add(arvottuRivi);
+                }
+            }
+
+            public List<LottoRivi> getRivit()
+            {
+                return (lottorivit);
+            }
+
+            
         }
     }
-
     public class LottoRivi
     {
-        public LottoRivi(int lukumaara, int maksimi)
+        List<int> arvotutNumerot = null;
+
+        public LottoRivi(Random rnd, int lukumaara, int maksimi)
         {
-            
+            int arvottuNumero = 0;
+            arvotutNumerot = new List<int>();
+            while (true)
+            {
+                //arvotaan numero
+                arvottuNumero = rnd.Next(1, maksimi + 1);
+               if (!arvotutNumerot.Contains(arvottuNumero))
+                {
+                    arvotutNumerot.Add(arvottuNumero);
+                }
+                if (arvotutNumerot.Count >= lukumaara)
+                {
+                    break;
+                }
+            }
+            arvotutNumerot.Sort();
         }
         public override string ToString()
         {
-
-            
+            return String.Join(", ", arvotutNumerot);
         }
     }
-    public class LottoRivit
-    {
-        List<LottoRivi> lottoRivit;
-        public LottoRivit()
-        {
-
-            lottoRivit.Add(new LottoRivi());
-
-        }
-    }
-
 }
