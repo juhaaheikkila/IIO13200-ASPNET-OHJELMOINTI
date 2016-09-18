@@ -8,9 +8,14 @@ using System.Web.UI.WebControls;
 
 public partial class Tehtava_2_1_Suomi_lotto : System.Web.UI.Page
 {
+    public string gstrTitle = "Suomi-lotto"; // lotto
+    public int gintRuudukko = 39; // ruudukon max
+    public int gintNumeroita = 7; // arvottavien numeroiden lukumäärä
+
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        
+        lblTitle.Text = gstrTitle;
     }
 
     protected void btnArvoNumerot_Click(object sender, EventArgs e)
@@ -20,7 +25,7 @@ public partial class Tehtava_2_1_Suomi_lotto : System.Web.UI.Page
         {
             //DataTable dt = JAMK.ICT.Data.DBPlacebo.Get3TestStudents();
             int intRivienLukumaara = intRivienLukumaara = Convert.ToInt16(txtRivienLukumaara.Text);
-            DataTable dtLotto = JAMK.ICT.BL.Lottoaja.ArvoLottoNumerot("Suomi-lotto", 7, 39, intRivienLukumaara);
+            DataTable dtLotto = JAMK.ICT.BL.Lottoaja.ArvoLottoNumerot(gstrTitle, gintNumeroita, gintRuudukko, intRivienLukumaara);
 
             gvArvotutnumerot.DataSource = dtLotto;
             gvArvotutnumerot.DataBind();
