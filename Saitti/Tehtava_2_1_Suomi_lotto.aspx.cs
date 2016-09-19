@@ -16,6 +16,9 @@ public partial class Tehtava_2_1_Suomi_lotto : System.Web.UI.Page
     {
         
         lblTitle.Text = gstrTitle;
+        lblInfo.Text = 
+            "Arvotaan: " + Convert.ToSingle(gintNumeroita) + " numeroa<br />" +
+            "Ruudukko: " + Convert.ToString (gintRuudukko);
     }
 
     protected void btnArvoNumerot_Click(object sender, EventArgs e)
@@ -24,16 +27,17 @@ public partial class Tehtava_2_1_Suomi_lotto : System.Web.UI.Page
         try
         {
             //DataTable dt = JAMK.ICT.Data.DBPlacebo.Get3TestStudents();
-            int intRivienLukumaara = intRivienLukumaara = Convert.ToInt16(txtRivienLukumaara.Text);
-            DataTable dtLotto = JAMK.ICT.BL.Lottoaja.ArvoLottoNumerot(gstrTitle, gintNumeroita, gintRuudukko, intRivienLukumaara);
+            int intRivienLukumaara = Convert.ToInt16(txtRivienLukumaara.Text);
+            DataTable dtLotto = JAMK.ICT.BL.LottoArvonta.dtArvoLottoNumerot(gstrTitle, gintNumeroita, gintRuudukko, intRivienLukumaara);
 
             gvArvotutnumerot.DataSource = dtLotto;
             gvArvotutnumerot.DataBind();
+            lblMessages.Text = "...";
         }
 
         catch (Exception ex)
         {
-            DataTable dtLotto = JAMK.ICT.BL.Lottoaja.ArvoLottoNumerot("Suomi-lotto", 7, 39, 0);
+            DataTable dtLotto = JAMK.ICT.BL.LottoArvonta.dtArvoLottoNumerot(gstrTitle, gintNumeroita, gintRuudukko, 0);
             gvArvotutnumerot.DataSource = dtLotto;
             gvArvotutnumerot.DataBind();
             lblMessages.Text = ex.Message;

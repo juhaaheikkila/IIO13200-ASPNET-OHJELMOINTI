@@ -16,6 +16,11 @@
             <div id="actionbuttons">
                 <asp:Button ID="btnArvoNumerot" runat="server" Text="Arvo numerot" OnClick="btnArvoNumerot_Click" />
             </div>
+            <div id="info">
+                <p>
+                    <asp:Label ID="lblInfo" Text="..." runat="server" />
+                </p>
+            </div>
             <div id="tulokset">
                 <p>
                     Arvottavien rivien lukumäärä: 

@@ -4,24 +4,23 @@ using System.Data;
 using System.Linq;
 using System.Web;
 
-
 /// <summary>
 /// Summary description for BLLotto
 /// </summary>
 namespace JAMK.ICT.BL
 {
-    public static class Lottoaja
+    public static class LottoArvonta
     {
 
-        public static DataTable ArvoLottoNumerot(string strKoneenNimi, int intLukumaaraArvottavia, int intRuudukonMaksimi, int intRivienLukumaara)
+        public static DataTable dtArvoLottoNumerot(string strArvonta, int intLukumaaraArvottavia, int intRuudukonMaksimi, int intRivienLukumaara)
         {
             DataTable dt = new DataTable();
-            LottoKone lottoa = new LottoKone(strKoneenNimi, intLukumaaraArvottavia, intRuudukonMaksimi, intRivienLukumaara);
+            LottoKone lottoa = new LottoKone(strArvonta, intLukumaaraArvottavia, intRuudukonMaksimi, intRivienLukumaara);
             List<LottoRivi> lottorivit = lottoa.getRivit();
             LottoRivi lottorivi = null;
 
             dt.Columns.Add("#");
-            dt.Columns.Add(strKoneenNimi);
+            dt.Columns.Add(strArvonta);
 
             for (int f = 0; f < lottorivit.Count; f++)
             {

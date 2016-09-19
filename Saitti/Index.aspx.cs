@@ -3,12 +3,48 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
+using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 
 public partial class Index : System.Web.UI.Page
 {
+
+    string ButtonCaptionShow = "Näytä kuvaus";
+    string ButtonCaptionHide = "Piilota kuvaus";
+
     protected void Page_Load(object sender, EventArgs e)
     {
+        setbuttonCaptions();
 
+        lblMessage.Text = "refreshing " + DateTime.Now.ToString("h:mm:ss tt");
+
+    }
+
+    protected void btnShowHideInfo_Click(object sender, EventArgs e)
+    {
+        //   string sendId = sender.ClientID;
+        Button btnShowHide = (Button)sender;
+        string strButtonIndex = "";
+
+        strButtonIndex = btnShowHide.ID;
+        strButtonIndex = strButtonIndex.Substring(strButtonIndex.IndexOf("_") + 1);
+
+        if (strButtonIndex == "1")
+            Tehtävä_Info_1.Visible = !Tehtävä_Info_1.Visible;
+        else if (strButtonIndex == "2")
+            Tehtävä_Info_2.Visible = !Tehtävä_Info_2.Visible;
+        else if (strButtonIndex == "3")
+            Tehtävä_Info_3.Visible = !Tehtävä_Info_3.Visible;
+        else if (strButtonIndex == "4")
+            Tehtävä_Info_4.Visible = !Tehtävä_Info_4.Visible;
+
+        setbuttonCaptions();
+    }
+    void setbuttonCaptions()
+    {
+        btnShowHide_1.Text = Tehtävä_Info_1.Visible ? ButtonCaptionHide : ButtonCaptionShow;
+        btnShowHide_2.Text = Tehtävä_Info_2.Visible ? ButtonCaptionHide : ButtonCaptionShow;
+        btnShowHide_3.Text = Tehtävä_Info_3.Visible ? ButtonCaptionHide : ButtonCaptionShow;
+        btnShowHide_4.Text = Tehtävä_Info_4.Visible ? ButtonCaptionHide : ButtonCaptionShow;
     }
 }

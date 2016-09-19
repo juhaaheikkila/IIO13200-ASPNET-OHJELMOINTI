@@ -1,67 +1,88 @@
-﻿p {font-family:Arial, Helvetica, sans-serif }
-h1
-{
-	font-family: Arial;
-	background-color:silver;  
-	color:blue; 
-	font-size:x-large 
+﻿p {
+    font-family: Arial, Helvetica, sans-serif;
 }
-h2
-{
-	font-family: Arial;
-	color:blue;
+
+.tehtava {
+    border:1px solid gray;
+    background-color:azure;
+    margin-bottom:18px;
 }
-h3
-{
-	font-family: Arial;
-	color:green;
+.tehtavan_kuvaus {
+    border-bottom: dotted 3px gray;
+    background-color: azure;
 }
-h4
-{
-	color: rgb(51, 102, 0);
+
+.tehtavan_ratkaisu {
+    //border: dotted 1px;
+    background-color: azure;
 }
-button
-{
-	background-color: rgb(51, 0, 153);
-	color: rgb(255, 255, 255);
+
+.tehtavan_kuvaus_title {
+    font-weight: bold;
 }
-label
-{
-	color: rgb(0, 0, 0);
+
+h1 {
+    font-family: Arial;
+    background-color: silver;
+    color: blue;
+    font-size: x-large;
 }
-textarea
-{
-	color: rgb(11, 0, 0);
+
+h2 {
+    font-family: Arial;
+    color: blue;
 }
-fieldset
-{
-	color: rgb(11, 0, 0);
+
+h3 {
+    font-family: Arial;
+    color: green;
 }
-legend
-{
-	color: rgb(51, 0, 153);
+
+h4 {
+    color: rgb(51, 102, 0);
 }
-select
-{
-	color: rgb(11, 0, 0);
+
+button {
+    background-color: rgb(51, 0, 153);
+    color: rgb(255, 255, 255);
 }
-caption
-{
-	color: rgb(51, 0, 153);
+
+label {
+    color: rgb(0, 0, 0);
 }
-th
-{
-	color: rgb(0, 0, 0);
+
+textarea {
+    color: rgb(11, 0, 0);
 }
-.level1
-{
+
+fieldset {
+    color: rgb(11, 0, 0);
+}
+
+legend {
+    color: rgb(51, 0, 153);
+}
+
+select {
+    color: rgb(11, 0, 0);
+}
+
+caption {
+    color: rgb(51, 0, 153);
+}
+
+th {
+    color: rgb(0, 0, 0);
+}
+
+.level1 {
     color: White;
     background-color: Black;
     font-size: large;
     font-weight: bold;
 }
-.level2
-{
+
+.level2 {
     color: Blue;
     font-family: Gill Sans MT !important;
     font-size: medium;
