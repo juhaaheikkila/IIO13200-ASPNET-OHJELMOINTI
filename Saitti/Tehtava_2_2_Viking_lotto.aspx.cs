@@ -17,7 +17,7 @@ public partial class Tehtava_2_2_Viking_lotto : System.Web.UI.Page
         lblTitle.Text = gstrTitle;
         lblInfo.Text =
             "Arvotaan: " + Convert.ToSingle(gintNumeroita) + " numeroa<br />" +
-            "Ruudukko: " + Convert.ToString(gintRuudukko);
+            "Ruudukko: " + Convert.ToString(gintRuudukkoAlkaa) + "-" + Convert.ToString(gintRuudukko);
     }
 
     protected void btnArvoNumerot_Click(object sender, EventArgs e)
