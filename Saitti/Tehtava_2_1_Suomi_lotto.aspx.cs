@@ -9,7 +9,8 @@ using System.Web.UI.WebControls;
 public partial class Tehtava_2_1_Suomi_lotto : System.Web.UI.Page
 {
     public string gstrTitle = "Suomi-lotto"; // lotto
-    public int gintRuudukko = 39; // ruudukon max
+    public int gintRuudukkoAlkaa = 1; // ruudukon min luku
+    public int gintRuudukko = 39; // ruudukon maksimi luku
     public int gintNumeroita = 7; // arvottavien numeroiden lukumäärä
 
     protected void Page_Load(object sender, EventArgs e)
@@ -18,7 +19,7 @@ public partial class Tehtava_2_1_Suomi_lotto : System.Web.UI.Page
         lblTitle.Text = gstrTitle;
         lblInfo.Text = 
             "Arvotaan: " + Convert.ToSingle(gintNumeroita) + " numeroa<br />" +
-            "Ruudukko: " + Convert.ToString (gintRuudukko);
+            "Ruudukko: " + Convert.ToString(gintRuudukkoAlkaa) + "-" + Convert.ToString (gintRuudukko);
     }
 
     protected void btnArvoNumerot_Click(object sender, EventArgs e)
@@ -28,7 +29,7 @@ public partial class Tehtava_2_1_Suomi_lotto : System.Web.UI.Page
         {
             //DataTable dt = JAMK.ICT.Data.DBPlacebo.Get3TestStudents();
             int intRivienLukumaara = Convert.ToInt16(txtRivienLukumaara.Text);
-            DataTable dtLotto = JAMK.ICT.BL.LottoArvonta.dtArvoLottoNumerot(gstrTitle, gintNumeroita, gintRuudukko, intRivienLukumaara);
+            DataTable dtLotto = JAMK.ICT.BL.LottoArvonta.dtArvoLottoNumerot(gstrTitle, gintNumeroita, gintRuudukkoAlkaa, gintRuudukko, intRivienLukumaara);
 
             gvArvotutnumerot.DataSource = dtLotto;
             gvArvotutnumerot.DataBind();
@@ -37,7 +38,7 @@ public partial class Tehtava_2_1_Suomi_lotto : System.Web.UI.Page
 
         catch (Exception ex)
         {
-            DataTable dtLotto = JAMK.ICT.BL.LottoArvonta.dtArvoLottoNumerot(gstrTitle, gintNumeroita, gintRuudukko, 0);
+            DataTable dtLotto = JAMK.ICT.BL.LottoArvonta.dtArvoLottoNumerot(gstrTitle, gintNumeroita, gintRuudukkoAlkaa, gintRuudukko, 0);
             gvArvotutnumerot.DataSource = dtLotto;
             gvArvotutnumerot.DataBind();
             lblMessages.Text = ex.Message;

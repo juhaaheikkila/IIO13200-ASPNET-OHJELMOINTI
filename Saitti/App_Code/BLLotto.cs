@@ -12,10 +12,10 @@ namespace JAMK.ICT.BL
     public static class LottoArvonta
     {
 
-        public static DataTable dtArvoLottoNumerot(string strArvonta, int intLukumaaraArvottavia, int intRuudukonMaksimi, int intRivienLukumaara)
+        public static DataTable dtArvoLottoNumerot(string strArvonta, int intLukumaaraArvottavia, int intRuudukonMinimi, int intRuudukonMaksimi, int intRivienLukumaara)
         {
             DataTable dt = new DataTable();
-            LottoKone lottoa = new LottoKone(strArvonta, intLukumaaraArvottavia, intRuudukonMaksimi, intRivienLukumaara);
+            LottoKone lottoa = new LottoKone(strArvonta, intLukumaaraArvottavia, intRuudukonMinimi, intRuudukonMaksimi, intRivienLukumaara);
             List<LottoRivi> lottorivit = lottoa.getRivit();
             LottoRivi lottorivi = null;
 
@@ -36,6 +36,7 @@ namespace JAMK.ICT.BL
             Random rnd = new Random((int)DateTime.Now.Ticks);
             string strKoneenNimi;
             int intLukumaaraArvottavia;
+            int intRuudukonMinimi;
             int intRuudukonMaksimi;
             int intRivienLukumaara;
             
@@ -43,10 +44,11 @@ namespace JAMK.ICT.BL
             //private LottoRivit lottorivit = null;
             private List<LottoRivi> lottorivit = new List<LottoRivi>();
 
-            public LottoKone(string strKoneenNimi, int intLukumaaraArvottavia, int intRuudukonMaksimi, int intRivienLukumaara)
+            public LottoKone(string strKoneenNimi, int intLukumaaraArvottavia, int intRuudukonMinimi, int intRuudukonMaksimi, int intRivienLukumaara)
             {
                 this.strKoneenNimi = strKoneenNimi;
                 this.intLukumaaraArvottavia = intLukumaaraArvottavia;
+                this.intRuudukonMinimi = intRuudukonMinimi;
                 this.intRuudukonMaksimi = intRuudukonMaksimi;
                 this.intRivienLukumaara = intRivienLukumaara;
                 arvoRivit(intRivienLukumaara);
@@ -57,7 +59,7 @@ namespace JAMK.ICT.BL
                 LottoRivi arvottuRivi = null;
                 for (int i = 1; i <= intRivienLukumaara; i++)
                 {
-                    arvottuRivi = new LottoRivi(rnd, this.intLukumaaraArvottavia , this.intRuudukonMaksimi);
+                    arvottuRivi = new LottoRivi(rnd, this.intLukumaaraArvottavia , this.intRuudukonMinimi, this.intRuudukonMaksimi);
                     lottorivit.Add(arvottuRivi);
                 }
             }
@@ -74,14 +76,14 @@ namespace JAMK.ICT.BL
     {
         List<int> arvotutNumerot = null;
 
-        public LottoRivi(Random rnd, int lukumaara, int maksimi)
+        public LottoRivi(Random rnd, int lukumaara, int minimi, int maksimi)
         {
             int arvottuNumero = 0;
             arvotutNumerot = new List<int>();
             while (true)
             {
                 //arvotaan numero
-                arvottuNumero = rnd.Next(1, maksimi + 1);
+                arvottuNumero = rnd.Next(minimi, maksimi + 1);
                if (!arvotutNumerot.Contains(arvottuNumero))
                 {
                     arvotutNumerot.Add(arvottuNumero);
