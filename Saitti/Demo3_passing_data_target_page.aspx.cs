@@ -33,6 +33,15 @@ public partial class Demo3_passing_data_target_page : System.Web.UI.Page
                 msg += "Keksissä lukee " + Request.Cookies[kex].Value;
         }
 
+        //VE4 luetaan edellisen sivun Propery
+        msg += "<h3>Propertyn lukeminen</h3>";
+        var previouspage = PreviousPage;
+        if (previouspage != null)
+        {
+            msg += "Edellisen sivun propery on " + previouspage.SecretMessage;
+        }
+            
+
         mytext.InnerHtml = msg;
     }
 }

@@ -15,7 +15,7 @@
             <asp:Button ID="btnQuery" runat="server" Text="Case1: Query String" OnClick="btnQuery_Click" /><br />
             <asp:Button ID="btnSession" runat="server" Text="Case2: Session" OnClick="btnSession_Click" /><br />
             <asp:Button ID="btnCookie" runat="server" Text="Case3: Cookie" OnClick="btnCookie_Click" /><br />
-
+            <asp:Button ID="btnPublicProperty" runat="server" Text="Case4: Property" OnClick="btnPublicProperty_Click" /><br />
 
         </div>
     </form>

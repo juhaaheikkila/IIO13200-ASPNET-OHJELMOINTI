@@ -12,6 +12,17 @@
         <div>
             <h1>IIO13200. NET Ohjelmointi</h1>
 
+            <h2>Demo</h2>
+            <div id="demo_DataTrasfer" class="tehtava">
+                <p>Demo, 22.9.2016: tiedon välityksesä sivujen välillä</p>
+                <p>1. QueryString</p>
+                <p>2. Session</p>
+                <p>3. Cookies</p>
+                <p>4. Parametrina</p>
+                <asp:HyperLink NavigateUrl ="~/Demo3_passing_data_source_page.aspx" Text="Source page" runat="server" Target="_blank">Source page</asp:HyperLink><br />
+                <asp:HyperLink NavigateUrl ="~/Demo3_passing_data_target_page.aspx" Text="Target page" runat ="server" Target="_blank">Target page</asp:HyperLink><br />
+            </div>
+
             <h2>Viikkotehtävät:</h2>
             <div id="Tehtävä_1" class="tehtava">
                 <h3># Tehtävä 1 (8.9.2016), Ikkunan tarjouslaskuri: 
