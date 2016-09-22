@@ -14,7 +14,14 @@ public partial class Demo3_passing_data_source_page : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        //alustetaan kontrollit jne VAIN KERRAN
+        if (!IsPostBack)
+        {
+            ddlMessages.Items.Add("Hello.");
+            ddlMessages.Items.Add("Ping?");
+            ddlMessages.Items.Add("Handshake?");
+            ddlMessages.Items.Add("Goodby!");
+        }
     }
 
     protected void btnQuery_Click(object sender, EventArgs e)
@@ -28,6 +35,10 @@ public partial class Demo3_passing_data_source_page : System.Web.UI.Page
     protected void btnSession_Click(object sender, EventArgs e)
     {
         //kirjoitetaan Sessioniin ja siirrytään toiselle sivulle
+        if (!Page.IsValid)
+        {
+
+        }
         Session["Message"] = txtMessage.Text;
         Response.Redirect("Demo3_passing_data_target_page.aspx");
     }
@@ -44,6 +55,19 @@ public partial class Demo3_passing_data_source_page : System.Web.UI.Page
     protected void btnPublicProperty_Click(object sender, EventArgs e)
     {
         Server.Transfer("Demo3_passing_data_target_page.aspx");
+
+    }
+
+    protected void ddlMessages_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        //kirjoitetaan valittu vakioteksti txtboxiin
+        txtMessage.Text = ddlMessages.SelectedItem.ToString();
+
+    }
+
+
+    protected void txtMessage_TextChanged(object sender, EventArgs e)
+    {
 
     }
 }

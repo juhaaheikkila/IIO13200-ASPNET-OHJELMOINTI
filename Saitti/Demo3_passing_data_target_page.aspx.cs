@@ -38,7 +38,7 @@ public partial class Demo3_passing_data_target_page : System.Web.UI.Page
         var previouspage = PreviousPage;
         if (previouspage != null)
         {
-            msg += "Edellisen sivun propery on " + previouspage.SecretMessage;
+            msg += "Edellisen sivun property on " + previouspage.SecretMessage;
         }
             
 
