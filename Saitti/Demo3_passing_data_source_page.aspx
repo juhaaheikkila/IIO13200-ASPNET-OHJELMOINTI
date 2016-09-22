@@ -12,7 +12,7 @@
             <h1>Source page</h1>
             Message to send:
             <asp:TextBox ID="txtMessage" runat="server" OnTextChanged="txtMessage_TextChanged" />
-            <br />
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Pakollinen tieto!" ControlToValidate="txtMessage"></asp:RequiredFieldValidator><br />
                 Vakioviestit: <asp:DropDownList ID="ddlMessages" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlMessages_SelectedIndexChanged"></asp:DropDownList><br />
             <asp:Button ID="btnQuery" runat="server" Text="Case1: Query String" OnClick="btnQuery_Click" /><br />
             <asp:Button ID="btnSession" runat="server" Text="Case2: Session" OnClick="btnSession_Click" /><br />

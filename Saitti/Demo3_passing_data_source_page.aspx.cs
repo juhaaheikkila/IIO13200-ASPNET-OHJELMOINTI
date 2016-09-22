@@ -27,7 +27,10 @@ public partial class Demo3_passing_data_source_page : System.Web.UI.Page
     protected void btnQuery_Click(object sender, EventArgs e)
     {
         //we will use standard redirtion with Redirect
-        Response.Redirect("Demo3_passing_data_target_page.aspx?user=Esa&Message=" + txtMessage.Text);
+        if (Page.IsValid)
+        {
+            Response.Redirect("Demo3_passing_data_target_page.aspx?user=Esa&Message=" + txtMessage.Text);
+        }
 
         //testing
     }
