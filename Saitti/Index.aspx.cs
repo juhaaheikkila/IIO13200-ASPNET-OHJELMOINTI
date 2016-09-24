@@ -14,8 +14,10 @@ public partial class Index : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        setbuttonCaptions();
-
+        if (!IsPostBack)
+        {
+            setbuttonCaptions();
+        }
         lblMessage.Text = "refreshing " + DateTime.Now.ToString("h:mm:ss tt");
 
     }

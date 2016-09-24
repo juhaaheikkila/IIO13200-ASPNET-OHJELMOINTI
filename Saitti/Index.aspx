@@ -19,8 +19,8 @@
                 <p>2. Session</p>
                 <p>3. Cookies</p>
                 <p>4. Parametrina</p>
-                <asp:HyperLink NavigateUrl ="~/Demo3_passing_data_source_page.aspx" Text="Source page" runat="server" Target="_blank">Source page</asp:HyperLink><br />
-                <asp:HyperLink NavigateUrl ="~/Demo3_passing_data_target_page.aspx" Text="Target page" runat ="server" Target="_blank">Target page</asp:HyperLink><br />
+                <asp:HyperLink NavigateUrl="~/Demo3_passing_data_source_page.aspx" Text="Source page" runat="server" Target="_blank">Source page</asp:HyperLink><br />
+                <asp:HyperLink NavigateUrl="~/Demo3_passing_data_target_page.aspx" Text="Target page" runat="server" Target="_blank">Target page</asp:HyperLink><br />
             </div>
 
             <h2>Viikkotehtävät:</h2>
@@ -78,16 +78,25 @@
             </div>
 
             <div id="Tehtävä3" class="tehtava">
-                <h3># Tehtävä 3 ...tulossa validation controls tai jotain muuta...(22.9.2016): 
+                <h3># Tehtävä 3 Calender -kontrolli (22.9.2016): 
                 <asp:Button ID="btnShowHide_3" runat="server" Text="Näytä kuvaus" OnClick="btnShowHideInfo_Click" BorderStyle="None" />
                 </h3>
                 <div id="Tehtävä_Info_3" runat="server" class="tehtavan_kuvaus" visible="false">
                     <p class="tehtavan_kuvaus_title">Tehtävä:</p>
-                    <p></p>
+                    <p>Toteuta ASP.NET:llä yksinkertainen simppeli sovellus, jolla käyttäjä voi laskea kuluvan päivän ja syntymäpäivänssä erotuksen päivinä.</p>
+                    <p>
+                        ASP.NETissä on valmis kalenteri-kontrolli (asp:Calender), käytäs sitä eli:
+                    </p>
+                    <ul>
+                        <li>käyttäjä valitsee haluamansa päivämäärän kalenterista </li>
+                        <li>jolloin sovellus ilmoittaa montako vuotta, kuukautta ja päivää valitusta päivämäärästä on tähän päivään.</li>
+                    </ul>
+
                 </div>
                 <div id="Tehtävä_Ratkaisu_3" runat="server" class="tehtavan_ratkaisu">
                     <p class="tehtavan_kuvaus_title">Ratkaisu:</p>
                     <p></p>
+                    <p>** linkki: <asp:HyperLink runat="server" NavigateUrl="~/Tehtava_3_Kalenteri_kontrolli.aspx">Calender-kontrolli</asp:HyperLink>
                 </div>
             </div>
 
