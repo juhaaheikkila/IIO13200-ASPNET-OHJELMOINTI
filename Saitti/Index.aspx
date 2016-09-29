@@ -104,6 +104,10 @@
                 <h3># Tehtävä 4 (29.9.2016):
                 <asp:Button ID="btnShowHide_4" runat="server" Text="Näytä kuvaus" OnClick="btnShowHideInfo_Click" BorderStyle="None" />
                 </h3>
+                <p>ohjeet yhteyden tekoon: http://student.labranet.jamk.fi/vpn/ <br />
+vpn ohje: http://student.labranet.jamk.fi/wp/wp-content/uploads/2014/09/LabraNet_Remote_Access_Guide.pdf
+                </p>
+
                 <div id="Tehtävä_Info_4" runat="server" class="tehtavan_kuvaus" visible="false">
                     <p class="tehtavan_kuvaus_title">Tehtävä:</p>
                     <p>...</p>
