@@ -2,11 +2,13 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+
 .tehtava {
-    border:1px solid gray;
-    background-color:azure;
-    margin-bottom:18px;
+    border: 1px solid gray;
+    background-color: azure;
+    margin-bottom: 18px;
 }
+
 .tehtavan_kuvaus {
     border-bottom: dotted 3px gray;
     background-color: azure;
@@ -23,8 +25,7 @@
 
 h1 {
     font-family: Arial;
-    background-color: silver;
-    color: blue;
+    color: black;
     font-size: x-large;
 }
 

@@ -1,0 +1,91 @@
+﻿body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.fixed_menu_content {
+    width: 100%;
+}
+
+.fixed_menu {
+    color: #fff;
+    background-color: #2ba6cb;
+    overflow: visible;
+    height: 32px;
+}
+
+
+.action_left {
+    float: left;
+    display: inline-block;
+}
+
+.action_right {
+    float: right;
+    display: inline-block;
+}
+
+.actionBar {
+    border-bottom: dotted black 2px;
+    padding: 2px;
+}
+
+.actionButton {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 4px 24px;
+    text-align: center;
+    text-decoration: none;
+    //display: inline-block;
+    font-size: 16px;
+}
+
+.actionSave {
+    background-color: #4CAF50;
+}
+
+.actionClose {
+    background-color: #555555;
+}
+
+div.fixed_menu {
+    color: #fff;
+    background-color: #2ba6cb;
+    overflow: visible;
+    height: 32px; /* tlappete 05/2015 */
+}
+
+div.fixed_menu_content {
+    width: 100%;
+}
+
+/***************** clearfix **************/
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+.JELabel {
+    width: 128px;
+    border: 1px dotted gray;
+    display: inline;
+}
+
+.JEData {
+    width: 400px;
+    font-weight: bolder;
+    border: 1px dotted gray;
+    display: inline;
+}
+
+.JEInfo {
+    border: 1px dotted gray;
+    display: inline-block;
+}
+
+.JEFooter {
+    border-top: dotted black 2px;
+    font-size: 10px;
+}
