@@ -15,6 +15,7 @@ public partial class Tehtava_1_IkkunaLaskuri : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         
+
     }
 
     double getValue(string strValue)
