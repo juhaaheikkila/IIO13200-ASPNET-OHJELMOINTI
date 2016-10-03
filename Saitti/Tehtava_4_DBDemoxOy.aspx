@@ -7,10 +7,11 @@
     <h1>Tehtävä 4 - asiakastiedot DBDemoxOy-luokan metodeilla haettuna </h1>
     <!-- GV kontrolli esittää dataa -->
     <asp:GridView ID="gvAsiakkaat" runat="server" />
+    <asp:Label ID ="lblResults" runat ="server" text="..."/>
 
     
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="footer" Runat="Server">
-    <asp:Label ID ="lblMessages" runat ="server" />
+    <asp:Label ID ="lblMessages" runat ="server" text="..."/>
 </asp:Content>
 

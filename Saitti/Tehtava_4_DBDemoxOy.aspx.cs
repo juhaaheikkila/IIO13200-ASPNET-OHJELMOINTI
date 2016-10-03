@@ -8,6 +8,7 @@ using System.Web.UI.WebControls;
 
 public partial class Tehtava_4_DBDemoxOy : System.Web.UI.Page
 {
+
     protected void Page_Load(object sender, EventArgs e)
     {
         try
@@ -16,10 +17,11 @@ public partial class Tehtava_4_DBDemoxOy : System.Web.UI.Page
 
             gvAsiakkaat.DataSource = dtAsiakkaat;
             gvAsiakkaat.DataBind();
-            lblMessages.Text = "asiakkaita löytyi: " + gvAsiakkaat.Rows.Count.ToString();
+            lblResults.Text = "asiakkaita löytyi: " + gvAsiakkaat.Rows.Count.ToString();
         }
         catch (Exception ex)
         {
+            lblResults.Text = "...";
             lblMessages.Text = ex.Message;
         }
     }
