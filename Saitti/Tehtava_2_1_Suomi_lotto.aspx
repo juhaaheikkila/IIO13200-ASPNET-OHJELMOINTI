@@ -24,7 +24,7 @@
             <div id="tulokset">
                 <p>
                     Arvottavien rivien lukumäärä: 
-            <asp:TextBox ID="txtRivienLukumaara" runat="server" class="w3-input"></asp:TextBox>
+            <asp:TextBox ID="txtRivienLukumaara" runat="server"></asp:TextBox>
                 </p>
                 <asp:Label ID="lblResults" Text="..." runat="server" />
             </div>

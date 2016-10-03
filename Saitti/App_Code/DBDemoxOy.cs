@@ -29,7 +29,8 @@ namespace JAMK.IT
             try
             {
                 string sql = "";
-                sql = "SELECT asioid, lastname, firstname, date FROM lasnaolot"; // WHERE asioid='salesa'";
+                //sql = "SELECT asioid, lastname, firstname, date FROM lasnaolot"; // WHERE asioid='salesa'";
+                sql = "SELECT astunnus, asnimi, yhteyshlo, postitmp FROM asiakas ORDER BY astunnus"; // WHERE asioid='salesa'";
                 string connStr = @"Data source=eight.labranet.jamk.fi;initial catalog=DemoxOy;user=koodari;password=koodari13";
                 using (SqlConnection conn = new SqlConnection(connStr))
                 {
@@ -40,8 +41,8 @@ namespace JAMK.IT
                     {
                         SqlDataAdapter da = new SqlDataAdapter(cmd);
                         DataSet ds = new DataSet();
-                        da.Fill(ds, "lasnaolot");
-                        return ds.Tables["lasnaolot"];
+                        da.Fill(ds, "asiakkaat");
+                        return ds.Tables["asiakkaat"];
                     }
                 }
             }

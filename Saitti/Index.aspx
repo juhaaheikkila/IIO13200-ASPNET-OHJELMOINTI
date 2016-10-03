@@ -96,25 +96,49 @@
                 <div id="Tehtävä_Ratkaisu_3" runat="server" class="tehtavan_ratkaisu">
                     <p class="tehtavan_kuvaus_title">Ratkaisu:</p>
                     <p></p>
-                    <p>** linkki: <asp:HyperLink runat="server" NavigateUrl="~/Tehtava_3_Kalenteri_kontrolli.aspx">Calender-kontrolli</asp:HyperLink>
+                    <p>
+                        ** linkki:
+                        <asp:HyperLink runat="server" NavigateUrl="~/Tehtava_3_Kalenteri_kontrolli.aspx">Calender-kontrolli</asp:HyperLink>
+                    </p>
                 </div>
             </div>
 
             <div id="Tehtävä_4" class="tehtava">
-                <h3># Tehtävä 4 (29.9.2016):
+                <h3># Tehtävä 4 MasterPagea käyttävä webbi-sivu (29.9.2016)
                 <asp:Button ID="btnShowHide_4" runat="server" Text="Näytä kuvaus" OnClick="btnShowHideInfo_Click" BorderStyle="None" />
                 </h3>
-                <p>ohjeet yhteyden tekoon: http://student.labranet.jamk.fi/vpn/ <br />
-vpn ohje: http://student.labranet.jamk.fi/wp/wp-content/uploads/2014/09/LabraNet_Remote_Access_Guide.pdf
-                </p>
-
                 <div id="Tehtävä_Info_4" runat="server" class="tehtavan_kuvaus" visible="false">
                     <p class="tehtavan_kuvaus_title">Tehtävä:</p>
-                    <p>...</p>
+                    <p>
+                        Toteuta ASP.NET:lla alla olevien kuvien mukainen MasterPagea käyttävä webbi-sivu, joka kahdella eri tavalla hakee asiakastietoja twelve-palvelimen DemoxOy-tietokannan asiakas-taulusta.
+                    </p>
+                    <ul>
+                        <li>Tapa 1) SQLDataSourcen avulla</li>
+                        <li>Tapa 2) DBDemoxOy-luokan metodien avulla. Luokka (että tarvittava connection string) löytyvät storagelta Jakoon\IIO13200\Mallit\DbDemoxOy.cs-kansiosta.</li>
+                    </ul>
+                    <p>
+                        Tässä varulta myös valmis connection string:
+                    <code>
+                        <add name="Asiakkaat" connectionstring="Data Source=twelve.labranet.jamk.fi;Initial Catalog=DemoxOy;Persist Security Info=True;User ID=koodari;Password=ope_kertonut_tunnilla" providername="System.Data.SqlClient" />
+                    </code>
+                    </p>
+                    <p>
+                        ohjeet yhteyden tekoon: http://student.labranet.jamk.fi/vpn/
+                    <br />
+                        vpn ohje: http://student.labranet.jamk.fi/wp/wp-content/uploads/2014/09/LabraNet_Remote_Access_Guide.pdf
+                    </p>
                 </div>
                 <div id="Tehtävä_Ratkaisu_4" runat="server" class="tehtavan_ratkaisu">
                     <p class="tehtavan_kuvaus_title">Ratkaisu:</p>
                     <p></p>
+                    <p>
+                        ** linkki:
+                        <asp:HyperLink runat="server" NavigateUrl="~/Tehtava_4_SQOLDataSource.aspx">SQLDataSourcen-avulla</asp:HyperLink>
+                    </p>
+                    <p>
+                        ** linkki:
+                        <asp:HyperLink runat="server" NavigateUrl="~/Tehtava_4_DBDemoxOy.aspx">DBDemoxOy-luokan metodien avulla</asp:HyperLink>
+                    </p>
                 </div>
             </div>
 
