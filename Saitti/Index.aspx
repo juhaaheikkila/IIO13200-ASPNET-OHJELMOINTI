@@ -12,7 +12,7 @@
         <div>
             <h1>IIO13200. NET Ohjelmointi</h1>
 
-            <h2>Luentojen demot</h2>
+            <h2 style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size:8pt">Luentojen demot</h2>
             <div id="demo_DataTrasfer" class="tehtava">
                 <p>Demo, 22.9.2016: tiedon välityksesä sivujen välillä ja data validation </p>
                 <p>1. QueryString</p>
