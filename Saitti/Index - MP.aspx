@@ -11,6 +11,16 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="body" runat="Server">
 
         <div>
+            <!-- Authenticated as: L0011 
+Account  created: yes 
+
+A database 'L0011' has been created.
+You can also manually create L0011_1, L0011_2, and L0011_3.
+Your mysql password is Npm06Ynhr4l2GWm7UzyLa2bYSBthnquQ
+
+To log out, close your browser.
+This might also do it.-->
+
             <h1>IIO13200. NET Ohjelmointi</h1>
 
             <h2>Luentojen demot</h2>
