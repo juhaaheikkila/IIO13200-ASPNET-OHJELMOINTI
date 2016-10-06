@@ -18,11 +18,13 @@ public partial class Tehtava_4_DBDemoxOy : System.Web.UI.Page
             gvAsiakkaat.DataSource = dtAsiakkaat;
             gvAsiakkaat.DataBind();
             lblResults.Text = "asiakkaita löytyi: " + gvAsiakkaat.Rows.Count.ToString();
+            
         }
         catch (Exception ex)
         {
             lblResults.Text = "...";
-            lblMessages.Text = ex.Message;
+            
+            //lblMessage.Text = ex.Message;
         }
     }
 }

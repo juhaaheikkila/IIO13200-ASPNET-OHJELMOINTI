@@ -11,7 +11,9 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="body" runat="Server">
 
         <div>
-            <!-- Authenticated as: L0011 
+            <!--
+                http://student.labranet.jamk.fi/www-on-student-server/mysql/
+                 Authenticated as: L0011 
 Account  created: yes 
 
 A database 'L0011' has been created.

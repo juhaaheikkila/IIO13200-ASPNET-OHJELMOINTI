@@ -22,7 +22,19 @@
                 <asp:HyperLink NavigateUrl="~/Demo3_passing_data_source_page.aspx" Text="Source page" runat="server" Target="_blank">Source page</asp:HyperLink><br />
                 <asp:HyperLink NavigateUrl="~/Demo3_passing_data_target_page.aspx" Text="Target page" runat="server" Target="_blank">Target page</asp:HyperLink><br />
             </div>
-
+            <div id="Demo_MySql" class="tehtava">
+                <p>Demo, 6.10.2016, MySQL</p>
+                <asp:HyperLink NavigateUrl="~/MySQLDemo.aspx" Text="Source page" runat="server" Target="_blank">Demo-sivu</asp:HyperLink><br />
+            </div>
+            <p>Demo, 6.10.2016, JSON</p>
+            <code>http://student.labranet.jamk.fi/~salesa/mat/JsonTest
+                [{"name":"Jutta Urpilainen","gender":"Female","birthday":"1975-8-4","party":"SDP","position":"ex-Minister of Treasure"},
+ {"name":"Alexander Stubb","gender":"Male","birthday":"1968-4-1","party":"Kokoomus","position":"ex-Minister of Treasure"},
+ {"name":"Timo Soini","gender":"Male","birthday":"1962-5-30","party":"Perussuomalaiset","position":"Minister of Foreign Affairs"},
+ {"name":"Jyrki Katainen","gender":"Male","birthday":"1971-10-14","party":"Kokoomus","position":"ex-Prime Minister "}, {"name":"Tosi-Petteri Orpo","gender":"Male","birthday":"1969-6-9","party":"Kokoomus","position":"Minister of Treasure "},
+ {"name":"Sanni Lahn-Graasonen","gender":"Female","birthday":"1989-6-9","party":"Kokoomus","position":"Minister of Education and Culture"},
+ {"name":"Juha Sipilä","gender":"Male","birthday":"1961-04-25","party":"Keskusta","position":"Prime Minister ","linkki":"http://valtioneuvosto.fi/documents/10184/1432004/P%C3%A4%C3%A4ministeri+Sipil%C3%A4+i/42e872c9-ab67-4d77-923f-231ea7189672?t=1441185100000&width=580"}]
+            </code>
             <h2>Viikkotehtävät:</h2>
             <div id="Tehtävä_1" class="tehtava">
                 <h3># Tehtävä 1 (8.9.2016), Ikkunan tarjouslaskuri: 
@@ -140,6 +152,12 @@
                         <asp:HyperLink runat="server" NavigateUrl="~/Tehtava_4_DBDemoxOy.aspx">DBDemoxOy-luokan metodien avulla</asp:HyperLink>
                     </p>
                 </div>
+            </div>
+            <div>
+                viikko tehtävä yhdeksän 6.10.2016
+                VR:n junatiedot JSON.NET
+Toteuta ASP.NET:llä tai WPF-sovellus, jolla haetaan avointa dataa Suomen rataverkostolla kulkevista junista. Palvelun kuvaus löytyy: http://rata.digitraffic.fi/api/v1/doc/index.html
+http://rata.digitraffic.fi/api/v1/doc/index.html API palauttaa data JSON-muodossa. Muunna JSON olioiksi käyttämällä NewtonSoftin valmista kirjastoa. Tee toiminnallisuus, jolla käyttäjä voi valita haluamansa liikennepaikan, ja hakea sieltä kuluvan päivänä liikennöivät junat.  UI:hin että DBPlaceco-luokkaan.
             </div>
 
             <h3>Perus HTML kontrolleja</h3>
