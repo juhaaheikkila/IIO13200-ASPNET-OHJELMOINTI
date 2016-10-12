@@ -1,0 +1,59 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="0. SaitinMasteri.master.cs" Inherits="SaitinMasteri" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>IIO1320-pages</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="http://www.w3schools.com/lib/w3.css" rel="stylesheet" />
+    <link rel="stylesheet" href="CSS/Site_Styles.css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+
+        <div style="padding: 10px">
+            <table style="width: 100%; background: blue; color: White; tdpadding: 10px; vertical-align: top">
+                <tr>
+                    <td rowspan="2" style="vertical-align: top">
+                        <h1>IIO13200-<asp:Label ID="lblTitle" runat="server" Text="..."></asp:Label></h1>
+                    </td>
+                    <td style="vertical-align: top">username:
+                        <asp:Label ID="lblUsername" runat="server" Text="Label"></asp:Label>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top">date:
+                        <asp:Label ID="lblDate" runat="server" Text="Label"></asp:Label>
+                    </td>
+                </tr>
+            </table>
+            <div class='fixed_menu'>
+                <div class="fixed_menu_content clearfix">
+                    <ul>
+                        <li class="action_left">
+                            <asp:HyperLink Text="Tehtävät" runat="server" NavigateUrl="~/01.SaitinIndex.aspx">Tehtävät</asp:HyperLink>
+                        </li>
+
+                        <li class="action_left">
+                            <asp:HyperLink Text="Tehtävät" runat="server">Harjoitukset</asp:HyperLink>
+
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <asp:ContentPlaceHolder ID="body" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <div>
+            <asp:Label ID="lblMessage" runat="server" Text="..." /><br />
+            <asp:ContentPlaceHolder ID="footer" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

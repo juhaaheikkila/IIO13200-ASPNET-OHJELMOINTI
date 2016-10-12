@@ -2,6 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
+
 <asp:Content ID="Content2" ContentPlaceHolderID="body" Runat="Server">
     <!--DataSource määrittely-->
     <asp:SqlDataSource ID="srcAsiakkaat" runat="server" ConnectionString="<%$ ConnectionStrings:Asiakkaat %>" SelectCommand="SELECT [astunnus], [asnimi], [yhteyshlo], [postitmp] FROM [asiakas] ORDER BY [astunnus]"></asp:SqlDataSource>
@@ -9,7 +10,7 @@
     <!-- GV kontrolli esittää dataa -->
     <asp:GridView ID="GridView1" runat="server" DataSourceID="srcAsiakkaat"></asp:GridView>
 </asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="footer" Runat="Server">
 
+<asp:Content ID="Content3" ContentPlaceHolderID="footer" Runat="Server">
 </asp:Content>
 

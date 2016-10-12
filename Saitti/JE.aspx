@@ -6,7 +6,7 @@
 <head runat="server">
     <title>Journal Entry document</title>
     <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css" />
-    <link rel="stylesheet" href="CSS/JE_Styles.css" />
+    <link rel="stylesheet" href="CSS/Site_Styles.css" />
 </head>
 <body>
     <form id="frmJE" runat="server">

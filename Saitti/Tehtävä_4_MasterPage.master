@@ -11,10 +11,20 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div style="padding:10px">
-            <table style="width:100%;">
+        <div style="padding: 10px">
+            <table style="width: 100%;" style="background: blue; color: White; tdpadding: 10px">
                 <tr>
-                    <td style="background:blue; color:White; padding: 10px"><h1>IIO13200</h1></td>
+                    <td rowspan="2">
+                        <h1>IIO13200-<asp:Label ID="lblTitle" runat="server" Text="Label"></asp:Label></h1>
+                    </td>
+                    <td>
+                        username: <asp:Label ID="lblUsername" runat="server" Text="Label"></asp:Label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        date: <asp:Label ID="lblDate" runat="server" Text="Label"></asp:Label>
+                    </td>
                 </tr>
             </table>
             <asp:ContentPlaceHolder ID="body" runat="server">
@@ -22,11 +32,9 @@
         </div>
         <div>
             <hr />
-            <asp:HyperLink runat="server" NavigateUrl="~/Index.aspx"> <-- Takaisin etusivulle</asp:HyperLink>
-            <asp:Label ID="lblMessage" runat="server" Text="..." />
-            <asp:Label ID="lblMessu" runat="server" Text="messu"></asp:Label>
+            <asp:HyperLink runat="server" NavigateUrl="~/Index.aspx"> <-- Takaisin etusivulle</asp:HyperLink><br />
+            <asp:Label ID="lblMessage" runat="server" Text="..." /><br />
             <asp:ContentPlaceHolder ID="footer" runat="server">
-                
             </asp:ContentPlaceHolder>
         </div>
     </form>

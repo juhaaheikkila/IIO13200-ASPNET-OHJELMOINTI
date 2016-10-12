@@ -12,7 +12,7 @@
         <div>
             <h1>IIO13200. NET Ohjelmointi</h1>
 
-            <h2 style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size:8pt">Luentojen demot</h2>
+            <h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 8pt">Luentojen demot</h2>
             <div id="demo_DataTrasfer" class="tehtava">
                 <p>Demo, 22.9.2016: tiedon välityksesä sivujen välillä ja data validation </p>
                 <p>1. QueryString</p>
@@ -153,11 +153,37 @@
                     </p>
                 </div>
             </div>
-            <div>
-                viikko tehtävä yhdeksän 6.10.2016
-                VR:n junatiedot JSON.NET
-Toteuta ASP.NET:llä tai WPF-sovellus, jolla haetaan avointa dataa Suomen rataverkostolla kulkevista junista. Palvelun kuvaus löytyy: http://rata.digitraffic.fi/api/v1/doc/index.html
-http://rata.digitraffic.fi/api/v1/doc/index.html API palauttaa data JSON-muodossa. Muunna JSON olioiksi käyttämällä NewtonSoftin valmista kirjastoa. Tee toiminnallisuus, jolla käyttäjä voi valita haluamansa liikennepaikan, ja hakea sieltä kuluvan päivänä liikennöivät junat.  UI:hin että DBPlaceco-luokkaan.
+            <div id="Tehtävä_5" class="tehtava">
+                <a name="Tehtävä_5"></a>
+                <h3># Tehtävä 5 VR:n junatiedot JSON.NET (6.10.2016)
+                <asp:Button ID="btnShowHide_5" runat="server" Text="Näytä kuvaus" OnClick="btnShowHideInfo_Click" BorderStyle="None" />
+                </h3>
+                <div id="Tehtävä_Info_5" runat="server" class="tehtavan_kuvaus" visible="false">
+                    viikko tehtävä yhdeksän 6.10.2016
+                <p>VR:n junatiedot JSON.NET</p>
+                    <p>
+                        <ul>
+                            <li>Toteuta ASP.NET:llä tai WPF-sovellus, jolla haetaan avointa dataa Suomen rataverkostolla kulkevista junista.</li>
+                            <li>Palvelun kuvaus löytyy:
+                                http://rata.digitraffic.fi/api/v1/doc/index.html
+                                http://rata.digitraffic.fi/api/v1/doc/index.html
+                            </li>
+                            <li>API palauttaa data JSON-muodossa. Muunna JSON olioiksi käyttämällä NewtonSoftin valmista kirjastoa. </li>
+                            <li>Tee toiminnallisuus, jolla käyttäjä voi valita haluamansa liikennepaikan, ja hakea sieltä kuluvan päivänä liikennöivät junat.
+                                UI:hin että DBPlaceco-luokkaan.
+                            </li>
+
+                        </ul>
+                    </p>
+                </div>
+                <div id="Tehtävä_Ratkaisu_5" runat="server" class="tehtavan_ratkaisu">
+                    <p class="tehtavan_kuvaus_title">Ratkaisu:</p>
+                    <p></p>
+                    <p>
+                        ** linkki:
+                        <asp:HyperLink runat="server" NavigateUrl="~/Tehtava_5_JSON.aspx">VR:n junatiedot JSON.NET</asp:HyperLink>
+                    </p>
+                </div>
             </div>
 
             <h3>Perus HTML kontrolleja</h3>
