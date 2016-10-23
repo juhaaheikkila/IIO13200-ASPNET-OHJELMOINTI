@@ -35,6 +35,8 @@
  {"name":"Sanni Lahn-Graasonen","gender":"Female","birthday":"1989-6-9","party":"Kokoomus","position":"Minister of Education and Culture"},
  {"name":"Juha Sipilä","gender":"Male","birthday":"1961-04-25","party":"Keskusta","position":"Prime Minister ","linkki":"http://valtioneuvosto.fi/documents/10184/1432004/P%C3%A4%C3%A4ministeri+Sipil%C3%A4+i/42e872c9-ab67-4d77-923f-231ea7189672?t=1441185100000&width=580"}]
             </code>
+            <p>Demo, 13.10.2016</p>
+            <asp:HyperLink NavigateUrl="~/demo4_xml_työntekijät.aspx" Text="Demo xml ja xsl" runat="server" Target="_blank">Demo-sivu</asp:HyperLink><br />
             <h2>Viikkotehtävät:</h2>
             <div id="Tehtävä_1" class="tehtava">
                 <h3># Tehtävä 1 (8.9.2016), Ikkunan tarjouslaskuri: 

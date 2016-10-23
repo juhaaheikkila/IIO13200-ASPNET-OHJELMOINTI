@@ -43,8 +43,16 @@
     <palkka>2000</palkka>
   </tyontekija>
   <tyontekija>
-    <etunimi>Sinun</etunimi>
-    <sukunimi>Nimesi tänne?</sukunimi>
+    <etunimi>Samin</etunimi>
+    <sukunimi>Kaima</sukunimi>
+    <numero>10101</numero>
+    <tyosuhde>vakituinen</tyosuhde>
+    <palkka>3015</palkka>
+  </tyontekija>
+
+  <tyontekija>
+    <etunimi>L0011</etunimi>
+    <sukunimi>Stein</sukunimi>
     <numero>101</numero>
     <tyosuhde>määräaikainen</tyosuhde>
     <palkka>3000</palkka>
