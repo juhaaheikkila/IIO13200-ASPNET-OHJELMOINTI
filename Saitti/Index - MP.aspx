@@ -126,7 +126,19 @@ This might also do it.-->
                     <p></p>
                 </div>
             </div>
-
+            <div id="Tehtävä_5" class="tehtava">
+                <h3># Tehtävä 4 (29.9.2016):
+                <asp:Button ID="btnShowHide_5" runat="server" Text="Näytä kuvaus" OnClick="btnShowHideInfo_Click" BorderStyle="None" />
+                </h3>
+                <div id="Div1" runat="server" class="tehtavan_kuvaus" visible="false">
+                    <p class="tehtavan_kuvaus_title">Tehtävä:</p>
+                    <p>...</p>
+                </div>
+                <div id="Div2" runat="server" class="tehtavan_ratkaisu">
+                    <p class="tehtavan_kuvaus_title">Ratkaisu:</p>
+                    <p></p>
+                </div>
+            </div>
             <h3>Perus HTML kontrolleja</h3>
             <a href="TestiAamu.html">Testi html-sivu (aamu)</a>
             <p>

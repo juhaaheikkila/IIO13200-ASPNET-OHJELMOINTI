@@ -153,12 +153,37 @@
                     </p>
                 </div>
             </div>
-            <div id="Tehtävä_5" class="tehtava">
-                <a name="Tehtävä_5"></a>
-                <h3># Tehtävä 5 VR:n junatiedot JSON.NET (6.10.2016)
-                <asp:Button ID="btnShowHide_5" runat="server" Text="Näytä kuvaus" OnClick="btnShowHideInfo_Click" BorderStyle="None" />
+            <div id="Tehtävä_6" class="tehtava">
+                <h3># Tehtävä 6 Levykauppa X (13.10.2016):
+                <asp:Button ID="btnShowHide_6" runat="server" Text="Näytä kuvaus" OnClick="btnShowHideInfo_Click" BorderStyle="None" />
                 </h3>
-                <div id="Tehtävä_Info_5" runat="server" class="tehtavan_kuvaus" visible="false">
+                <div id="Tehtävä_Info_6" runat="server" class="tehtavan_kuvaus" visible="false">
+                    <p class="tehtavan_kuvaus_title">Tehtävä:</p>
+                    <img src="Images/LevykauppaX3.jpg" /><br />
+                    <img src="Images/LevykauppaX3B.jpg" /><br />
+                    <p>Tee oheisen kuvan mukainen ASP.NET- sivu, jossa esitetään XML-tiedostossa LevykauppaX.XML määriteltyjä levyjä kansikuvineen.</p>
+                    <p>Levyn ISBN on samalla tunniste kuvatiedostolle, eli samannimiset kuvatiedostot löydät Images-kansiosta.</p>
+                    <p>Luo sovellukseesi Images-kansio johon sijoitat kuvat.</p>
+                    <p>Oheisessa ratkaisussa on käytetty XmlDataSourcea-tietolähteenä ja Tablen sisällä olevaa DataList-kontrollia tiedon esittämiseen.</p>
+                    <p>Muitakin ratkaisuja saa käyttää.</p>
+                    <p>Napsauttamalla levyn ISBN-numeroa käyttäjä siirretään toiselle sivulle jossa näytetään levyn tarkemmat tiedot mm. levyllä olevat biisit.</p>
+                    <p>Tehtävässä käytettävä/tarvittava LevykauppaX.xml -tiedosto löytyy myös storagelta. Storagelta löytyy tarvittavat kuvatiedostot Images-kansiosta.</p>
+                    <p>Voit tehdä halutessasi myös oman toteutuksen jostakin muista artikkeleista esim autoista, kirjoista, DVD.stä --> hae muutama aiheeseen sopiva kuva netistä jolla voit demota toteutustasi.</p>
+                </div>
+                <div id="Div2" runat="server" class="tehtavan_ratkaisu">
+                    <p class="tehtavan_kuvaus_title">Ratkaisu:</p>
+                    <p>
+                        ** linkki:
+                        <asp:HyperLink runat="server" NavigateUrl="~/Tehtava_6_Levykauppa_X.aspx">Levykauppa X ikkuna</asp:HyperLink>
+                    </p>
+                </div>
+            </div>
+            <div id="Tehtävä_9" class="tehtava">
+                <a name="Tehtävä_9"></a>
+                <h3># Tehtävä 9 VR:n junatiedot JSON.NET (6.10.2016)
+                <asp:Button ID="btnShowHide_9" runat="server" Text="Näytä kuvaus" OnClick="btnShowHideInfo_Click" BorderStyle="None" />
+                </h3>
+                <div id="Tehtävä_Info_9" runat="server" class="tehtavan_kuvaus" visible="false">
                     viikko tehtävä yhdeksän 6.10.2016
                 <p>VR:n junatiedot JSON.NET</p>
                     <p>
