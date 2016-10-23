@@ -16,6 +16,7 @@ public partial class HaeTyöntekijätIlta : System.Web.UI.Page
         //luetaan web.configista xml-tiedoston nimi
         strXmlFile = ConfigurationManager.AppSettings["tiedosto"];
         lblMessage.Text = strXmlFile;
+
     }
 
     protected void btnHae_Click(object sender, EventArgs e)
