@@ -35,8 +35,8 @@
  {"name":"Sanni Lahn-Graasonen","gender":"Female","birthday":"1989-6-9","party":"Kokoomus","position":"Minister of Education and Culture"},
  {"name":"Juha Sipilä","gender":"Male","birthday":"1961-04-25","party":"Keskusta","position":"Prime Minister ","linkki":"http://valtioneuvosto.fi/documents/10184/1432004/P%C3%A4%C3%A4ministeri+Sipil%C3%A4+i/42e872c9-ab67-4d77-923f-231ea7189672?t=1441185100000&width=580"}]
             </code>
-            <p>Demo, 13.10.2016</p>
-            <asp:HyperLink NavigateUrl="~/demo4_xml_työntekijät.aspx" Text="Demo xml ja xsl" runat="server" Target="_blank">Demo-sivu</asp:HyperLink><br />
+            <p>Demo 5 xml kontrolli xsl työntekijät, 13.10.2016</p>
+            <asp:HyperLink NavigateUrl="~/demo5_xml_kontrolli_xsl_työntekijät.aspx" Text="Demo xml ja xsl" runat="server" Target="_blank">Demo-sivu</asp:HyperLink><br />
             <h2>Viikkotehtävät:</h2>
             <div id="Tehtävä_1" class="tehtava">
                 <h3># Tehtävä 1 (8.9.2016), Ikkunan tarjouslaskuri: 
@@ -180,6 +180,29 @@
                     </p>
                 </div>
             </div>
+            <div id="Tehtävä_8" class="tehtava">
+                <a name="Tehtävä_8"></a>
+                <h3># Tehtävä 8 FinnKino (13.10.2016)
+                <asp:Button ID="btnShowHide_8" runat="server" Text="Näytä kuvaus" OnClick="btnShowHideInfo_Click" BorderStyle="None" />
+                </h3>
+                <div id="Tehtävä_Info_8" runat="server" class="tehtavan_kuvaus" visible="false">
+                <p>FinnKino</p>
+                    <p>
+                       Toteuta oheisen kuvan mukainen webbi-sivu jossa esitetään kuvilla tällä viikolla FinnKinossa esitettävät elokuvat. Tarvittavat tiedot teattereista, elokuvista ja elokuvien kuvista löytyvä täältä Finnkinon sivulta: http://www.finnkino.fi/xml --> Käytä tarvittavia xml-feedejä.
+Sivun ulkoasun saat valita vapaasti mutta se voisi olla jotakuinkin oheisen kuvan mukainen.
+Toiminnallisuutta toteuta siten että käyttäjän klikatessa (1) sivun vasemmalta haluamaansa Teatteria, esitetään kuvina oikean puoleisessa taulukossa kyseisessä teatterissa pyörivät Elokuvat. Linkit elokuvien kuviin saat em. Finnkinon xml-feedeistä.
+                    </p>
+                </div>
+                <div id="Div3" runat="server" class="tehtavan_ratkaisu">
+                    <p class="tehtavan_kuvaus_title">Ratkaisu:</p>
+                    <p></p>
+                    <p>
+                        ** linkki:
+                        <asp:HyperLink runat="server" NavigateUrl="~/Tehtava_8_FinnKino.aspx">FinnKino tämän viikon elokuvat</asp:HyperLink>
+                    </p>
+                </div>
+            </div>
+
             <div id="Tehtävä_9" class="tehtava">
                 <a name="Tehtävä_9"></a>
                 <h3># Tehtävä 9 VR:n junatiedot JSON.NET (6.10.2016)
@@ -203,12 +226,12 @@
                         </ul>
                     </p>
                 </div>
-                <div id="Tehtävä_Ratkaisu_5" runat="server" class="tehtavan_ratkaisu">
+                <div id="Tehtävä_Ratkaisu_9" runat="server" class="tehtavan_ratkaisu">
                     <p class="tehtavan_kuvaus_title">Ratkaisu:</p>
                     <p></p>
                     <p>
                         ** linkki:
-                        <asp:HyperLink runat="server" NavigateUrl="~/Tehtava_5_JSON.aspx">VR:n junatiedot JSON.NET</asp:HyperLink>
+                        <asp:HyperLink runat="server" NavigateUrl="~/Tehtava_9_JSON.aspx">VR:n junatiedot JSON.NET</asp:HyperLink>
                     </p>
                 </div>
             </div>

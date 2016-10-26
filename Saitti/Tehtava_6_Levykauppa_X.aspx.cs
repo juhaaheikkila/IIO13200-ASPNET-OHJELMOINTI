@@ -45,6 +45,7 @@ public partial class _Default : System.Web.UI.Page
                 mstrArtist = item.Attributes["Artist"].Value;
                 mstrTitle = item.Attributes["Title"].Value;
                 mstrPrice = item.Attributes["Price"].Value;
+
                 myDiv.InnerHtml += string.Format("<tr><td><img src='/Images/{0}' alt='{0}' style='height:50px' /></td>", mstrISBN + ".jpg");
                 myDiv.InnerHtml += string.Format("<td>{0} : {1}<br />ISBN : <a href='Tehtava_6_LevynTiedot.aspx?ISBN={2}' target='_blank'>{2}</a><br />Hinta:{3}</td></tr>", mstrArtist, mstrTitle, mstrISBN, mstrPrice);
             }

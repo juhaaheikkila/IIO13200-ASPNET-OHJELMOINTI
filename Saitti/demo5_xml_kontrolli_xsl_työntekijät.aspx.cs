@@ -7,7 +7,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Xml;
 
-public partial class demo4_xml_työntekijät : System.Web.UI.Page
+public partial class demo5_xml_työntekijät : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {

@@ -29,8 +29,6 @@ public partial class Tehtava_6_LevynTiedot : System.Web.UI.Page
             String mstrTitle = "";
             String mstrPrice = "";
 
-
-            //XmlNode node1 = doc.SelectSingleNode("/Records/genre/record");
             XmlNodeList nodes = doc.SelectNodes("/Records/genre/record");
             myDiv.InnerHtml = "<table>";
             foreach (XmlNode item in nodes)

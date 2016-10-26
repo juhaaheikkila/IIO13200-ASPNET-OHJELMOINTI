@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/0. SaitinMasteri.master" AutoEventWireup="true" CodeFile="demo5_xml_kontrolli_xsl_työntekijät.aspx.cs" Inherits="demo4_xml_työntekijät" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/0. SaitinMasteri.master" AutoEventWireup="true" CodeFile="demo5_xml_kontrolli_xsl_työntekijät.aspx.cs" Inherits="demo5_xml_työntekijät" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>

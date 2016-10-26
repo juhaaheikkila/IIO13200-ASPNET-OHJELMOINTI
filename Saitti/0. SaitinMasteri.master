@@ -20,12 +20,12 @@
                         <h1>IIO13200-<asp:Label ID="lblTitle" runat="server" Text="..."></asp:Label></h1>
                     </td>
                     <td style="vertical-align: top">username:
-                        <asp:Label ID="lblUsername" runat="server" Text="Label"></asp:Label>
+                        <asp:Label ID="lblUsername" runat="server" Text="..."></asp:Label>
                     </td>
                 </tr>
                 <tr>
                     <td style="vertical-align: top">date:
-                        <asp:Label ID="lblDate" runat="server" Text="Label"></asp:Label>
+                        <asp:Label ID="lblDate" runat="server" Text="..."></asp:Label>
                     </td>
                 </tr>
             </table>
@@ -40,7 +40,9 @@
                             <asp:HyperLink Text="Tehtävät" runat="server">Harjoitukset</asp:HyperLink>
 
                         </li>
-
+                        <li class="action_left">
+                            <asp:CheckBox ID="chkDebug" runat="server" Text="Debug" OnCheckedChanged="chkDebug_CheckedChanged"/>
+                        </li>
                     </ul>
                 </div>
             </div>

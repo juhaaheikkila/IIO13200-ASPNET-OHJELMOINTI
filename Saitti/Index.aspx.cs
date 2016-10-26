@@ -43,6 +43,8 @@ public partial class Index : System.Web.UI.Page
         //    Tehtävä_Info_5.Visible = !Tehtävä_Info_5.Visible;
         else if (strButtonIndex == "6")
             Tehtävä_Info_6.Visible = !Tehtävä_Info_6.Visible;
+        else if (strButtonIndex == "8")
+            Tehtävä_Info_8.Visible = !Tehtävä_Info_8.Visible;
         else if (strButtonIndex == "9")
             Tehtävä_Info_9.Visible = !Tehtävä_Info_9.Visible;
 
@@ -55,5 +57,7 @@ public partial class Index : System.Web.UI.Page
         btnShowHide_2.Text = Tehtävä_Info_2.Visible ? ButtonCaptionHide : ButtonCaptionShow;
         btnShowHide_3.Text = Tehtävä_Info_3.Visible ? ButtonCaptionHide : ButtonCaptionShow;
         btnShowHide_4.Text = Tehtävä_Info_4.Visible ? ButtonCaptionHide : ButtonCaptionShow;
+        btnShowHide_6.Text = Tehtävä_Info_6.Visible ? ButtonCaptionHide : ButtonCaptionShow;
+        btnShowHide_8.Text = Tehtävä_Info_8.Visible ? ButtonCaptionHide : ButtonCaptionShow;
     }
 }
