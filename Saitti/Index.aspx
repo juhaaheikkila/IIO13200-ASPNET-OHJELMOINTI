@@ -12,9 +12,9 @@
         <div>
             <h1>IIO13200. NET Ohjelmointi</h1>
 
-            <h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 8pt">Luentojen demot</h2>
+            <h2>Luentojen demot</h2>
             <div id="demo_DataTrasfer" class="tehtava">
-                <p>Demo, 22.9.2016: tiedon välityksesä sivujen välillä ja data validation </p>
+                <h3>Demo, 22.9.2016: tiedon välityksesä sivujen välillä ja data validation </h3>
                 <p>1. QueryString</p>
                 <p>2. Session</p>
                 <p>3. Cookies</p>
@@ -23,20 +23,28 @@
                 <asp:HyperLink NavigateUrl="~/Demo3_passing_data_target_page.aspx" Text="Target page" runat="server" Target="_blank">Target page</asp:HyperLink><br />
             </div>
             <div id="Demo_MySql" class="tehtava">
-                <p>Demo, 6.10.2016, MySQL</p>
+                <h3>Demo, 6.10.2016, MySQL</h3>
                 <asp:HyperLink NavigateUrl="~/MySQLDemo.aspx" Text="Source page" runat="server" Target="_blank">Demo-sivu</asp:HyperLink><br />
             </div>
-            <p>Demo, 6.10.2016, JSON</p>
-            <code>http://student.labranet.jamk.fi/~salesa/mat/JsonTest
+            <div class="tehtava">
+                <h3>Demo, 6.10.2016, JSON</h3>
+                <code>http://student.labranet.jamk.fi/~salesa/mat/JsonTest
                 [{"name":"Jutta Urpilainen","gender":"Female","birthday":"1975-8-4","party":"SDP","position":"ex-Minister of Treasure"},
  {"name":"Alexander Stubb","gender":"Male","birthday":"1968-4-1","party":"Kokoomus","position":"ex-Minister of Treasure"},
  {"name":"Timo Soini","gender":"Male","birthday":"1962-5-30","party":"Perussuomalaiset","position":"Minister of Foreign Affairs"},
  {"name":"Jyrki Katainen","gender":"Male","birthday":"1971-10-14","party":"Kokoomus","position":"ex-Prime Minister "}, {"name":"Tosi-Petteri Orpo","gender":"Male","birthday":"1969-6-9","party":"Kokoomus","position":"Minister of Treasure "},
  {"name":"Sanni Lahn-Graasonen","gender":"Female","birthday":"1989-6-9","party":"Kokoomus","position":"Minister of Education and Culture"},
  {"name":"Juha Sipilä","gender":"Male","birthday":"1961-04-25","party":"Keskusta","position":"Prime Minister ","linkki":"http://valtioneuvosto.fi/documents/10184/1432004/P%C3%A4%C3%A4ministeri+Sipil%C3%A4+i/42e872c9-ab67-4d77-923f-231ea7189672?t=1441185100000&width=580"}]
-            </code>
-            <p>Demo 5 xml kontrolli xsl työntekijät, 13.10.2016</p>
-            <asp:HyperLink NavigateUrl="~/demo5_xml_kontrolli_xsl_työntekijät.aspx" Text="Demo xml ja xsl" runat="server" Target="_blank">Demo-sivu</asp:HyperLink><br />
+                </code>
+            </div>
+            <div class="tehtava">
+                <h3>Demo 5 xml kontrolli xsl työntekijät, 13.10.2016</h3>
+                <asp:HyperLink NavigateUrl="~/demo5_xml_kontrolli_xsl_työntekijät.aspx" Text="Demo xml ja xsl" runat="server" Target="_blank">Demo-sivu</asp:HyperLink><br />
+            </div>
+            <div class="tehtava">
+                <h3>Demo ADO.NET CRUD - Stuff harjoitus</h3>
+                <asp:HyperLink NavigateUrl="~/Demo7_Stuff.aspx" ID="HyperLink3" runat="server">Demo 7: ADO.NET CRUD Stuff</asp:HyperLink>
+            </div>
             <h2>Viikkotehtävät:</h2>
             <div id="Tehtävä_1" class="tehtava">
                 <h3># Tehtävä 1 (8.9.2016), Ikkunan tarjouslaskuri: 
@@ -186,9 +194,9 @@
                 <asp:Button ID="btnShowHide_8" runat="server" Text="Näytä kuvaus" OnClick="btnShowHideInfo_Click" BorderStyle="None" />
                 </h3>
                 <div id="Tehtävä_Info_8" runat="server" class="tehtavan_kuvaus" visible="false">
-                <p>FinnKino</p>
+                    <p>FinnKino</p>
                     <p>
-                       Toteuta oheisen kuvan mukainen webbi-sivu jossa esitetään kuvilla tällä viikolla FinnKinossa esitettävät elokuvat. Tarvittavat tiedot teattereista, elokuvista ja elokuvien kuvista löytyvä täältä Finnkinon sivulta: http://www.finnkino.fi/xml --> Käytä tarvittavia xml-feedejä.
+                        Toteuta oheisen kuvan mukainen webbi-sivu jossa esitetään kuvilla tällä viikolla FinnKinossa esitettävät elokuvat. Tarvittavat tiedot teattereista, elokuvista ja elokuvien kuvista löytyvä täältä Finnkinon sivulta: http://www.finnkino.fi/xml --> Käytä tarvittavia xml-feedejä.
 Sivun ulkoasun saat valita vapaasti mutta se voisi olla jotakuinkin oheisen kuvan mukainen.
 Toiminnallisuutta toteuta siten että käyttäjän klikatessa (1) sivun vasemmalta haluamaansa Teatteria, esitetään kuvina oikean puoleisessa taulukossa kyseisessä teatterissa pyörivät Elokuvat. Linkit elokuvien kuviin saat em. Finnkinon xml-feedeistä.
                     </p>
