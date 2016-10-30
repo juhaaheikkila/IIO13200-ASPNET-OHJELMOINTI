@@ -43,6 +43,8 @@ public partial class Index : System.Web.UI.Page
         //    Tehtävä_Info_5.Visible = !Tehtävä_Info_5.Visible;
         else if (strButtonIndex == "6")
             Tehtävä_Info_6.Visible = !Tehtävä_Info_6.Visible;
+        else if (strButtonIndex == "7")
+            Tehtävä_Info_7.Visible = !Tehtävä_Info_7.Visible;
         else if (strButtonIndex == "8")
             Tehtävä_Info_8.Visible = !Tehtävä_Info_8.Visible;
         else if (strButtonIndex == "9")

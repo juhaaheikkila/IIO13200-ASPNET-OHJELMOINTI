@@ -188,6 +188,28 @@
                     </p>
                 </div>
             </div>
+
+            <div id="Tehtävä_7" class="tehtava">
+                <a name="Tehtävä_7"></a>
+                <h3># Tehtävä 7 Palautteen anto (27.10.2016)
+                <asp:Button ID="btnShowHide_7" runat="server" Text="Näytä kuvaus" OnClick="btnShowHideInfo_Click" BorderStyle="None" />
+                </h3>
+                <div id="Tehtävä_Info_7" runat="server" class="tehtavan_kuvaus" visible="false">
+                    <p>Palautteen anto</p>
+                    <p>
+                        ** Linkki: 
+                        <asp:HyperLink runat="server" NavigateUrl="http://student.labranet.jamk.fi/~salesa/iio13200/tehtavat16.htm#Tehtava7" Target="_blank">Tehtävä 7</asp:HyperLink>
+                </div>
+                <div id="Tehtävä_Ratkaisu_7" runat="server" class="tehtavan_ratkaisu">
+                    <p class="tehtavan_kuvaus_title">Ratkaisu:</p>
+                    <p>
+                        ** linkki:
+                        <asp:HyperLink runat="server" NavigateUrl="~/Tehtava_7_palautteen anto.aspx">Palautteen anto</asp:HyperLink>
+                    </p>
+                </div>
+            </div>
+
+
             <div id="Tehtävä_8" class="tehtava">
                 <a name="Tehtävä_8"></a>
                 <h3># Tehtävä 8 FinnKino (13.10.2016)

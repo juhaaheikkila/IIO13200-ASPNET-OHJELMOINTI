@@ -45,6 +45,32 @@ namespace JAMK.ICT.Data
                 throw;
             }
         }
+
+        public static DataTable GetFeedbackFromMysql(string cs)
+        {
+            try
+            {
+                //yhteys labranetin myslille ja palautetaan taulu City DataTablena
+                string sql = "SELECT * FROM palaute ORDER BY pid ASC";
+                using (MySqlConnection conn = new MySqlConnection(cs))
+                {
+                    conn.Open();
+                    using (MySqlCommand cmd = new MySqlCommand(sql, conn))
+                    {
+                        MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
+                        return dt;
+                    }
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
         public static DataTable GetCitysFromMysql(string cs)
         {
             try

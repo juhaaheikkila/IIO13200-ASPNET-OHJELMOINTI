@@ -21,13 +21,13 @@ public partial class Tahtava_8_FinnKino : System.Web.UI.Page
             //DropDownList lstLocations;
             Label mpTitle = (Label)Page.Master.FindControl("lblTitle");
             Label mpDate = (Label)Page.Master.FindControl("lblDate");
-            Label mpUsername = (Label)Page.Master.FindControl("lblUsername");
+            //Label mpUsername = (Label)Page.Master.FindControl("lblUsername");
             mpMessage = (Label)Page.Master.FindControl("lblMessage");
 
             //mpUsername.Text = JAMK.IT.CommonCodes.AppSetting("Username");
             mpTitle.Text = "Viikkotehtävä 8, FinnKino viikon elokuvat";
             mpDate.Text = "13.10.2016";
-            mpUsername.Text = System.Configuration.ConfigurationManager.AppSettings["Username"];
+           // mpUsername.Text = System.Configuration.ConfigurationManager.AppSettings["Username"];
             //luetaan elokuvateatterit valintalistaan
             try
             {
