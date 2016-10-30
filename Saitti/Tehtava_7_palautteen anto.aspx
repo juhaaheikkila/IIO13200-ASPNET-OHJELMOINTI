@@ -21,10 +21,10 @@
             <h2 class="w3-container w3-blue">Anna palaute: </h2>
             <p>
                 Pvm *:<br />
-        <asp:TextBox ID="txtDate" runat="server" TextMode="Date" ToolTip="Valitse päivämäärä" OnTextChanged="txtDate_TextChanged" CausesValidation="True" AutoPostBack="True" Text="" Width="300" /><br />
+                <asp:TextBox ID="txtDate" runat="server" TextMode="Date" ToolTip="Valitse päivämäärä" OnTextChanged="txtDate_TextChanged" CausesValidation="True" AutoPostBack="True" Text="" Width="300" /><br />
                 <br />
                 <asp:RequiredFieldValidator runat="server"
-                    ID ="validateDate"
+                    ID="validateDate"
                     ControlToValidate="txtDate"
                     ErrorMessage="Kenttä on tyhjä"
                     SetFocusOnError="True">
@@ -33,7 +33,7 @@
             </p>
             <p>
                 Nimi *:<br />
-        <asp:TextBox ID="txtName" runat="server" Width="300" ></asp:TextBox><br />
+                <asp:TextBox ID="txtName" runat="server" Width="300"></asp:TextBox><br />
                 <asp:RequiredFieldValidator runat="server"
                     ControlToValidate="txtName"
                     ErrorMessage="Kenttä on tyhjä"
@@ -43,7 +43,7 @@
             </p>
             <p>
                 Olen oppinut *:<br />
-            <br />
+                <br />
                 <asp:TextBox ID="txtOlenOppinut" runat="server" Height="120" Width="300" TextMode="MultiLine"></asp:TextBox>
                 <br />
                 <asp:RequiredFieldValidator runat="server"
@@ -54,7 +54,7 @@
                 </asp:RequiredFieldValidator>
             </p>
             Haluan oppia *:<br />
-        <br />
+            <br />
             <asp:TextBox ID="txtHaluanOppia" runat="server" Height="120" Width="300" TextMode="MultiLine"></asp:TextBox>
             <br />
             <asp:RequiredFieldValidator runat="server"
@@ -70,7 +70,7 @@
             <h2 class="w3-container w3-blue">Palaute jatkuu: </h2>
             <p>
                 Hyvää *:<br />
-            <br />
+                <br />
                 <asp:TextBox ID="txtGoodStuff" runat="server" Height="120" Width="300" TextMode="MultiLine"></asp:TextBox><br />
                 <asp:RequiredFieldValidator runat="server"
                     ControlToValidate="txtGoodStuff"
@@ -81,7 +81,7 @@
             </p>
             <p>
                 Parannettavaa *:<br />
-            <br />
+                <br />
                 <asp:TextBox ID="txtNotSoGoodStuff" runat="server" Height="120" Width="300" TextMode="MultiLine"></asp:TextBox><br />
                 <asp:RequiredFieldValidator runat="server"
                     ControlToValidate="txtGoodStuff"
@@ -92,14 +92,18 @@
             </p>
             <p>
                 Muuta:<br />
-            <br />
+                <br />
                 <asp:TextBox ID="txtOther" runat="server" Height="120" Width="300" TextMode="MultiLine"></asp:TextBox>
             </p>
             <asp:Button ID="btnSendFeedBackXML" runat="server" OnClick="btnSendFeedBackXML_Click" Text="Lähetä palaute XML" />
             <asp:Button ID="btnSendFeedBackMySQL" runat="server" OnClick="btnSendFeedBackMySQL_Click" Text="Lähetä palaute Mysli" />
         </div>
     </div>
+    <div id="div1" class="w3-row" runat="server">
+        <asp:Button ID="btnShowFeedback" runat="server" Text="Näytä palautteet" OnClick="btnShowFeedback_Click" CausesValidation="false"/>
+    </div>
     <div id="divTables" class="w3-row" runat="server">
+
         <h2 class="w3-container w3-blue">Annetut palautteet XML:
             <asp:Label ID="lblAnnetutPalautteetXML" runat="server" Text="..."></asp:Label></h2>
 

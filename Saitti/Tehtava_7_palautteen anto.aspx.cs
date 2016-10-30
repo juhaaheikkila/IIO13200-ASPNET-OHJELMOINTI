@@ -58,9 +58,6 @@ public partial class Tehtava_7_palautteen_anto : System.Web.UI.Page
         gblnDebug = debug.Checked;
 
 
-        divTables.Visible = gblnDebug;
-
-
         //XML-tiedostosta
         XmlDocument doc = new XmlDocument();
         doc.Load(Server.MapPath("~/App_Data/Palautteet.xml"));
@@ -126,7 +123,6 @@ public partial class Tehtava_7_palautteen_anto : System.Web.UI.Page
 
     protected void btnSendFeedBackXML_Click(object sender, EventArgs e)
     {
-        divTables.Visible = gblnDebug;
         // XmlDataSource xmlPalauteFile = srcPalautteet;
         DataSet ds = new DataSet();
         DataTable dt = new DataTable();
@@ -184,7 +180,6 @@ public partial class Tehtava_7_palautteen_anto : System.Web.UI.Page
 
     protected void btnSendFeedBackMySQL_Click(object sender, EventArgs e)
     {
-        divTables.Visible = gblnDebug;
         string sqlQuery = "";
 
         try
@@ -239,5 +234,11 @@ public partial class Tehtava_7_palautteen_anto : System.Web.UI.Page
         }
 
 
+    }
+
+    protected void btnShowFeedback_Click(object sender, EventArgs e)
+    {
+        divTables.Visible = !divTables.Visible;
+        btnShowFeedback.Text = divTables.Visible ? "Piilota annetut palautteet" : "Näytä annetut palautteet";
     }
 }
