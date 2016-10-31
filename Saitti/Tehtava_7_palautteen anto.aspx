@@ -4,6 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="body" runat="Server">
     <!-- XMLData source määrittely -->
+    <!--
     <asp:XmlDataSource
         ID="srcPalautteet"
         runat="server"
@@ -14,6 +15,7 @@
         ConnectionString="<%$ ConnectionStrings:MysliEsa %>"
         ProviderName="MySql.Data.MySqlClient"
         SelectCommand="SELECT * FROM [palaute]" />
+    -->
 
 
     <div class="w3-row">
@@ -21,7 +23,7 @@
             <h2 class="w3-container w3-blue">Anna palaute: </h2>
             <p>
                 Pvm *:<br />
-                <asp:TextBox ID="txtDate" runat="server" TextMode="Date" ToolTip="Valitse päivämäärä" OnTextChanged="txtDate_TextChanged" CausesValidation="True" AutoPostBack="True" Text="" Width="300" /><br />
+                <asp:TextBox ID="txtDate" runat="server" TextMode="Date" ToolTip="Valitse päivämäärä" OnTextChanged="txtDate_TextChanged" CausesValidation="False" AutoPostBack="True" Text="" Width="300" /><br />
                 <br />
                 <asp:RequiredFieldValidator runat="server"
                     ID="validateDate"

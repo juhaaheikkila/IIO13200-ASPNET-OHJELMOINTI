@@ -9,27 +9,6 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Xml;
 
-public class Palaute
-{
-    public string pvm { get; set; }
-    public string tekija { get; set; }
-    public string opittu { get; set; }
-    public string haluanoppia { get; set; }
-    public string hyvaa { get; set; }
-    public string parannettavaa { get; set; }
-    public string muuta { get; set; }
-
-
-
-
-    public Palaute()
-    {
-        //
-        // TODO: Add constructor logic here
-        //
-    }
-}
-
 public partial class Tehtava_7_palautteen_anto : System.Web.UI.Page
 {
     Boolean gblnDebug = true;
@@ -56,25 +35,39 @@ public partial class Tehtava_7_palautteen_anto : System.Web.UI.Page
         debug = (CheckBox)Page.Master.FindControl("chkDebug");
         //debug.Checked = true;
         gblnDebug = debug.Checked;
+    }
 
 
+    protected void updateXML()
+    {
         //XML-tiedostosta
-        XmlDocument doc = new XmlDocument();
-        doc.Load(Server.MapPath("~/App_Data/Palautteet.xml"));
-        XmlNodeList nodes = doc.SelectNodes("/palautteet/palaute");
-        lblAnnetutPalautteetXML.Text = nodes.Count + " kpl";
+        try
+        {
+            XmlDocument doc = new XmlDocument();
+            doc.Load(Server.MapPath("~/App_Data/Palautteet.xml"));
+            XmlNodeList nodes = doc.SelectNodes("/palautteet/palaute");
+            lblAnnetutPalautteetXML.Text = nodes.Count + " kpl";
 
-        //haetaan XML-data DataView-olioon, joka kytketään GridViewhen
-        DataSet ds = new DataSet();
-        DataTable dt = new DataTable();
-        DataView dv = new DataView();
-        String xmlfilu = ConfigurationManager.AppSettings["palautetiedosto"];
-        ds.ReadXml(Server.MapPath(xmlfilu));//huom MapPath muuttaa viittauksen websaitille
-        dt = ds.Tables[0];
-        dv = dt.DefaultView;
-        gvPalautteet.DataSource = dv;
-        gvPalautteet.DataBind();
+            //haetaan XML-data DataView-olioon, joka kytketään GridViewhen
+            DataSet ds = new DataSet();
+            DataTable dt = new DataTable();
+            DataView dv = new DataView();
+            String xmlfilu = ConfigurationManager.AppSettings["palautetiedosto"];
+            ds.ReadXml(Server.MapPath(xmlfilu));//huom MapPath muuttaa viittauksen websaitille
+            dt = ds.Tables[0];
+            dv = dt.DefaultView;
+            gvPalautteet.DataSource = dv;
+            gvPalautteet.DataBind();
+        }
+        catch (Exception ex)
+        {
 
+            mpMessage.Text += "<br />" + ex.Message;
+        }
+    }
+
+    protected void updateMySQL()
+    {
         //MySQL kannasta
         try
         {
@@ -91,9 +84,6 @@ public partial class Tehtava_7_palautteen_anto : System.Web.UI.Page
             mpMessage.Text += "<br />" + ex.Message;
         }
     }
-
-
-
 
 
     protected void txtDate_TextChanged(object sender, EventArgs e)
@@ -182,10 +172,8 @@ public partial class Tehtava_7_palautteen_anto : System.Web.UI.Page
     {
         string sqlQuery = "";
 
-        try
-        {
-            //yhteys labranetin myslille ja palautetaan taulu City DataTablena
-
+       
+            //yhteys labranetin myslille
             string csMySQL = System.Configuration.ConfigurationManager.ConnectionStrings["MysliEsa"].ConnectionString;
             using (MySqlConnection conn = new MySqlConnection(csMySQL))
             {
@@ -224,21 +212,24 @@ public partial class Tehtava_7_palautteen_anto : System.Web.UI.Page
                 {
                     cmd.ExecuteNonQuery();
                 }
-               
+
+                conn.Close();
+
             }
 
-        }
-        catch (Exception ex)
-        {
-            throw ex;
-        }
+       
 
 
     }
 
     protected void btnShowFeedback_Click(object sender, EventArgs e)
     {
-        divTables.Visible = !divTables.Visible;
-        btnShowFeedback.Text = divTables.Visible ? "Piilota annetut palautteet" : "Näytä annetut palautteet";
+        updateXML();
+        updateMySQL();
+
+        //divTables.Visible = !divTables.Visible;
+        //btnShowFeedback.Text = divTables.Visible ? "Piilota annetut palautteet" : "Näytä annetut palautteet";
     }
+
+
 }

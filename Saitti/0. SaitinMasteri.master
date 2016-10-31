@@ -40,8 +40,9 @@
                             <asp:HyperLink Text="Tehtävät" runat="server">Harjoitukset</asp:HyperLink>
 
                         </li>
-                        <li class="action_left">
-                            <asp:CheckBox ID="chkDebug" runat="server" Text="Debug" OnCheckedChanged="chkDebug_CheckedChanged"/>
+                        <li class="action_right">
+                            <asp:CheckBox ID="chkDebug" runat="server" Text="" OnCheckedChanged="chkDebug_CheckedChanged"/>
+                            Debug
                         </li>
                     </ul>
                 </div>
