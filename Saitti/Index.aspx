@@ -14,7 +14,7 @@
 
             <h2>Luentojen demot</h2>
             <div id="demo_DataTrasfer" class="tehtava">
-                <h3>Demo, 22.9.2016: tiedon välityksesä sivujen välillä ja data validation </h3>
+                <h3>Demo, 22.9.2016: tiedon välityksessä sivujen välillä ja data validation </h3>
                 <p>1. QueryString</p>
                 <p>2. Session</p>
                 <p>3. Cookies</p>
@@ -45,6 +45,10 @@
                 <h3>Demo ADO.NET CRUD - Stuff harjoitus</h3>
                 <asp:HyperLink NavigateUrl="~/Demo7_Stuff.aspx" ID="HyperLink3" runat="server">Demo 7: ADO.NET CRUD Stuff</asp:HyperLink>
             </div>
+            <div class="tehtava">
+                <h3>entity framework</h3>
+                <asp:HyperLink NavigateUrl="~/Demo9_BookShop.aspx" ID="HyperLink4" runat="server">Demo 9: ADO.NET CRUD Stuff</asp:HyperLink>
+            </div>"
             <h2>Viikkotehtävät:</h2>
             <div id="Tehtävä_1" class="tehtava">
                 <h3># Tehtävä 1 (8.9.2016), Ikkunan tarjouslaskuri: 

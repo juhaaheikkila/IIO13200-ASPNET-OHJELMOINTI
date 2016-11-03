@@ -13,6 +13,8 @@
         <div>
             <!--
                 http://student.labranet.jamk.fi/www-on-student-server/mysql/
+
+                https://mysql.labranet.jamk.fi
                  Authenticated as: L0011 
 Account  created: yes 
 
