@@ -48,7 +48,8 @@
             <div class="tehtava">
                 <h3>entity framework</h3>
                 <asp:HyperLink NavigateUrl="~/Demo9_BookShop.aspx" ID="HyperLink4" runat="server">Demo 9: ADO.NET CRUD Stuff</asp:HyperLink>
-            </div>"
+            </div>
+            "
             <h2>Viikkotehtävät:</h2>
             <div id="Tehtävä_1" class="tehtava">
                 <h3># Tehtävä 1 (8.9.2016), Ikkunan tarjouslaskuri: 
@@ -159,14 +160,32 @@
                     <p></p>
                     <p>
                         ** linkki:
-                        <asp:HyperLink runat="server" NavigateUrl="~/Tehtava_4_SQOLDataSource.aspx">SQLDataSourcen-avulla</asp:HyperLink>
+                        <asp:HyperLink runat="server" NavigateUrl="~/Tehtava_4_SQOLDataSource.aspx" Target="_blank">SQLDataSourcen-avulla</asp:HyperLink>
                     </p>
                     <p>
                         ** linkki:
-                        <asp:HyperLink runat="server" NavigateUrl="~/Tehtava_4_DBDemoxOy.aspx">DBDemoxOy-luokan metodien avulla</asp:HyperLink>
+                        <asp:HyperLink runat="server" NavigateUrl="~/Tehtava_4_DBDemoxOy.aspx" Target="_blank">DBDemoxOy-luokan metodien avulla</asp:HyperLink>
                     </p>
                 </div>
             </div>
+
+            <div id="Tehtava_5" class="tehtava">
+                <h3>Tehtävä 5 Asiakastiedot EntityFrameworkilla (3.11.2016)</h3>
+                <asp:Button ID="btnShowHide_5" runat="server" Text="Näytä kuvaus" OnClick="btnShowHideInfo_Click" BorderStyle="None" />
+                <div id="Tehtävä_Info_5" runat="server" class="tehtavan_kuvaus" visible="false">
+                    <p class="tehtavan_kuvaus_title">Tehtävä:</p>
+                    <p>Toteuta Entity Frameworkkia käyttäen oheisen kuvan kaltainen webbisivu, jolla voi listata asiakkaita twelve-palveliminen DemoxOy-tietokannan asiakas-taulusta.</p>
+                    <asp:HyperLink runat="server" NavigateUrl="http://student.labranet.jamk.fi/~salesa/iio13200/tehtavat16.htm#Tehtava5" Target="_blank">Asiakastiedot EntityFrameworkilla</asp:HyperLink>
+                </div>
+                <div id="Tehtävä_Ratkaisu_5" runat="server" class="tehtavan_ratkaisu">
+                    <p class="tehtavan_kuvaus_title">Ratkaisu:</p>
+                    <p>
+                        ** linkki:
+                        <asp:HyperLink runat="server" NavigateUrl="~/Tehtava_5_Asiakastiedot_EntityFrameworkilla.aspx" Target="_blank">Asiakastiedot EntityFrameworkilla</asp:HyperLink>
+                    </p>
+                </div>
+            </div>
+
             <div id="Tehtävä_6" class="tehtava">
                 <h3># Tehtävä 6 Levykauppa X (13.10.2016):
                 <asp:Button ID="btnShowHide_6" runat="server" Text="Näytä kuvaus" OnClick="btnShowHideInfo_Click" BorderStyle="None" />
@@ -184,11 +203,11 @@
                     <p>Tehtävässä käytettävä/tarvittava LevykauppaX.xml -tiedosto löytyy myös storagelta. Storagelta löytyy tarvittavat kuvatiedostot Images-kansiosta.</p>
                     <p>Voit tehdä halutessasi myös oman toteutuksen jostakin muista artikkeleista esim autoista, kirjoista, DVD.stä --> hae muutama aiheeseen sopiva kuva netistä jolla voit demota toteutustasi.</p>
                 </div>
-                <div id="Div2" runat="server" class="tehtavan_ratkaisu">
+                <div id="Tehtävä_Ratkaisu_6" runat="server" class="tehtavan_ratkaisu">
                     <p class="tehtavan_kuvaus_title">Ratkaisu:</p>
                     <p>
                         ** linkki:
-                        <asp:HyperLink runat="server" NavigateUrl="~/Tehtava_6_Levykauppa_X.aspx">Levykauppa X ikkuna</asp:HyperLink>
+                        <asp:HyperLink runat="server" NavigateUrl="~/Tehtava_6_Levykauppa_X.aspx" Target="_blank">Levykauppa X ikkuna</asp:HyperLink>
                     </p>
                 </div>
             </div>
@@ -213,7 +232,6 @@
                 </div>
             </div>
 
-
             <div id="Tehtävä_8" class="tehtava">
                 <a name="Tehtävä_8"></a>
                 <h3># Tehtävä 8 FinnKino (13.10.2016)
@@ -232,7 +250,7 @@ Toiminnallisuutta toteuta siten että käyttäjän klikatessa (1) sivun vasemmal
                     <p></p>
                     <p>
                         ** linkki:
-                        <asp:HyperLink runat="server" NavigateUrl="~/Tehtava_8_FinnKino.aspx">FinnKino tämän viikon elokuvat</asp:HyperLink>
+                        <asp:HyperLink runat="server" NavigateUrl="~/Tehtava_8_FinnKino.aspx" Target="_blank">FinnKino tämän viikon elokuvat</asp:HyperLink>
                     </p>
                 </div>
             </div>
@@ -265,7 +283,7 @@ Toiminnallisuutta toteuta siten että käyttäjän klikatessa (1) sivun vasemmal
                     <p></p>
                     <p>
                         ** linkki:
-                        <asp:HyperLink runat="server" NavigateUrl="~/Tehtava_9_JSON.aspx">VR:n junatiedot JSON.NET</asp:HyperLink>
+                        <asp:HyperLink runat="server" NavigateUrl="~/Tehtava_9_JSON.aspx" Target="_blank">VR:n junatiedot JSON.NET</asp:HyperLink>
                     </p>
                 </div>
             </div>
