@@ -197,6 +197,7 @@ public partial class Demo9_BookShop : System.Web.UI.Page
             {
                 //poistetaan
                 //????
+                ctx.Customers.Remove(kusti);
                 ctx.SaveChanges();
 
                 FillControls(); // UI ajantasalle
