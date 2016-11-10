@@ -11,13 +11,14 @@ public partial class Demo9_BookShop : System.Web.UI.Page
 
 
     protected static BookShopEntities ctx;
+    protected static bool KustiValittu;
 
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!IsPostBack)
         {
 
-            
+
             mpTitle = (Label)Page.Master.FindControl("lblTitle");
             Label mpDate = (Label)Page.Master.FindControl("lblDate");
             //Label mpUsername = (Label)Page.Master.FindControl("lblUsername");
@@ -26,12 +27,12 @@ public partial class Demo9_BookShop : System.Web.UI.Page
             mpTitle.Text = "ENTITY FRAMEWORK - Bookstore";
             mpDate.Text = "3.11.2016";
 
-
             //ctx:ään tiedot vain kerran ja kontrollien populointi
             ctx = new BookShopEntities();
             FillControls();
 
         }
+
     }
     #region METHODS
     protected void FillControls()
@@ -50,9 +51,19 @@ public partial class Demo9_BookShop : System.Web.UI.Page
         ddlCustomers.DataBind();
         //lisätään tyhjä alkio ddl:ään
         ddlCustomers.Items.Insert(0, string.Empty);
+        //CRUDia varten
+        txtFirstName.Text = string.Empty;
+        txtLastName.Text = string.Empty;
+        SetButtons();
 
-        //.Items.Add(new ListItem(strName, strID));
-        //ddlCustomers
+    }
+
+    protected void SetButtons()
+    {
+        //buttosten käytettävyyden hallinta
+        btnNewCustomer.Enabled = !KustiValittu;
+        btnSaveCustomer.Enabled = KustiValittu;
+        btnDeleteCustomer.Enabled = KustiValittu;
     }
 
     protected void ShowCustomers()
@@ -69,7 +80,7 @@ public partial class Demo9_BookShop : System.Web.UI.Page
         int i = ctx.Books.Count();
         lblMessages.Text = string.Format("Haettu {0} kirjan tiedot", i);
     }
-    protected void ShowCustomersOrders(Customers kusti) 
+    protected void ShowCustomersOrders(Customers kusti)
     {
         ltResult.Text = string.Format("Asiakkaalla {0} {1} on {2} tilausta", kusti.firstname, kusti.lastname, kusti.Orders.Count());
         //loopataan asiakkana tilaukset läpi
@@ -106,9 +117,93 @@ public partial class Demo9_BookShop : System.Web.UI.Page
                       select c;
             Customers kusti = ret.FirstOrDefault();
             ShowCustomersOrders(kusti);
-        } else
+            KustiValittu = true;
+            txtFirstName.Text = kusti.firstname;
+            txtLastName.Text = kusti.lastname;
+            SetButtons();
+        }
+        else
         {
-            ltResult.Text = "...";
+            KustiValittu = false;
+            ltResult.Text = string.Empty;
+            txtLastName.Text = string.Empty;
+            txtFirstName.Text = string.Empty;
+            SetButtons();
+        }
+    }
+
+    protected void btnNewCustomer_Click(object sender, EventArgs e)
+    {
+        // luodaan uusi asiakas kontekstiin jollei samannimistä ole
+        //tsekkaus LINQ_lla
+        bool isThere = ctx.Customers.Any(c => (c.firstname.Contains(txtFirstName.Text) & c.lastname.Contains(txtLastName.Text)));
+        if (isThere)
+        {
+            lblMessages.Text = string.Format("Asiakas {0} on jo olemassa.", txtLastName.Text);
+
+        }
+        else
+        {
+            //luodaan uusi customer entiteetti
+            Customers kusti = new Customers();
+            kusti.firstname = txtFirstName.Text;
+            kusti.lastname = txtLastName.Text;
+            ctx.Customers.Add(kusti);
+            //kontekstin tallennus kantaan
+            ctx.SaveChanges();
+            //ilmoitukset ui:hin
+            lblMessages.Text = string.Format("Uusi asiakas {0} {1} {2} luotu onnistuneesti.", kusti.firstname, kusti.firstname, kusti.id);
+            FillControls();
+        }
+    }
+
+    protected void btnSaveCustomer_Click(object sender, EventArgs e)
+    {
+        //haetaan valitun asiakkaan id
+        int i = int.Parse(ddlCustomers.SelectedValue);
+        if (i>0)
+        {
+            var ret = ctx.Customers.Where(c => c.id == i);
+            Customers kusti = ret.FirstOrDefault();
+            if (kusti != null)
+            {
+                if (kusti.firstname != txtFirstName.Text)
+                {
+                    kusti.firstname = txtFirstName.Text;
+                }
+                if (kusti.lastname != txtFirstName.Text)
+                {
+                    kusti.lastname = txtLastName.Text;
+                }
+                ctx.SaveChanges();
+
+                FillControls(); // UI ajantasalle
+
+                
+            }
+
+        }
+    }
+
+    protected void btnDeleteCustomer_Click(object sender, EventArgs e)
+    {
+        //haetaan valitun asiakkaan id
+        int i = int.Parse(ddlCustomers.SelectedValue);
+        if (i > 0)
+        {
+            var ret = ctx.Customers.Where(c => c.id == i);
+            Customers kusti = ret.FirstOrDefault();
+            if (kusti != null)
+            {
+                //poistetaan
+                //????
+                ctx.SaveChanges();
+
+                FillControls(); // UI ajantasalle
+
+
+            }
+
         }
     }
 }
