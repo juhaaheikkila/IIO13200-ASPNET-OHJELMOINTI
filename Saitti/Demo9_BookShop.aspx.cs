@@ -17,7 +17,7 @@ public partial class Demo9_BookShop : System.Web.UI.Page
         if (!IsPostBack)
         {
 
-
+            
             mpTitle = (Label)Page.Master.FindControl("lblTitle");
             Label mpDate = (Label)Page.Master.FindControl("lblDate");
             //Label mpUsername = (Label)Page.Master.FindControl("lblUsername");

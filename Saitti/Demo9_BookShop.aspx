@@ -17,7 +17,7 @@
 
         <!-- oikea lohko kirjat -->
         <div class="w3-container w3-twothird">
-            <asp:Button ID="btnGetBooks" runat="server" CssClass="w3-btn" OnClick="btnGetBooks_Click" Text="Hae kirjat" />
+            <asp:Button ID="btnGetBooks" runat="server" CssClass="w3-btn w3-blue" OnClick="btnGetBooks_Click" Text="Hae kirjat" />
             <br />
             <br />
 

@@ -1,0 +1,31 @@
+﻿/*hide dropdownlist button*/
+select {
+    /* Size and position */
+    position: relative;
+    width: 200px;
+    margin: 0 auto;
+    padding: 10px; /* Styles */
+    background: #fff;
+    border-radius: 7px;
+    border: 1px solid rgba(0,0,0,0.15);
+    box-shadow: 0 1px 1px rgba(50,50,50,0.1);
+    cursor: pointer;
+    outline: none;
+    -webkit-appearance: none;
+}
+
+    select2-arrow ::-ms-expand {
+        display: none;
+    }
+
+    .stbutton {
+    margin: 0px 0px 10px 0px;
+    background-color: #2ba6cb;
+    text-align: left;
+    width: 250px;
+    height: 40px;
+    border-radius: 3px 3px 10px 3px;
+}
+.stbuttonCancel {
+    background-color: darkorange
+} 
