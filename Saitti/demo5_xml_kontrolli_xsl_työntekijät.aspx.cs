@@ -57,6 +57,7 @@ public partial class demo5_xml_työntekijät : System.Web.UI.Page
         int count = 0;
         XmlDocument doc = new XmlDocument();
         doc.Load("/App_Data/Työntekijät2013.xml");
+        
         XmlNodeList nodes = doc.SelectNodes("/tyontekijat/tyontekija[tyosuhde = 'vakituinen']");
 
 

@@ -275,4 +275,13 @@
     <parannettavaa>iuu</parannettavaa>
     <muuta>uiuiui</muuta>
   </palaute>
+  <palaute>
+    <pvm>13.11.2016</pvm>
+    <tekija>niminen</tekija>
+    <opittu>opittua</opittu>
+    <haluanoppia>uutta</haluanoppia>
+    <hyvaa>hyvää</hyvaa>
+    <parannettavaa>eipä</parannettavaa>
+    <muuta>muuta</muuta>
+  </palaute>
 </palautteet>
